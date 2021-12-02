@@ -160,11 +160,13 @@
     <Resource Include="Images\MuonSach.png" />
     <Resource Include="Images\PhieuThuTienPhat.png" />
     <Resource Include="Images\ThongTinMuonSach.png" />
-    <Resource Include="Images\QuanLySach.png" />
     <Resource Include="Images\TraSach.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Sach.png" />
+    <Resource Include="Images\Sach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\QuanLySach.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />

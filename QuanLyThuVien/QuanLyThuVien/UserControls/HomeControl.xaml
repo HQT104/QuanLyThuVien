@@ -47,6 +47,7 @@
                 <ColumnDefinition ></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
+
             <Button Height="170" Width="300" x:Uid="0" x:Name="btnQuanLySach" Grid.Column="0" Background="#FF40BDC7">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <Image Source="/Images/QuanLySach.png" Width="130"/>
