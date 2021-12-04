@@ -7,5 +7,7 @@
     <viewmodel:AccountViewModel x:Key="AccountVM"></viewmodel:AccountViewModel>
     <viewmodel:RegulationViewModel x:Key="RegulationVM"></viewmodel:RegulationViewModel>
     <viewmodel:ReportViewModel x:Key="ReportVM"></viewmodel:ReportViewModel>
+    <viewmodel:BookManagementViewModel x:Key="BookVM"></viewmodel:BookManagementViewModel>
+    <viewmodel:CardManagementViewModel x:Key="CardVM"></viewmodel:CardManagementViewModel>
 
 </ResourceDictionary>

@@ -4,11 +4,12 @@
                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
                 xmlns:local="clr-namespace:QuanLyThuVien.UserControls" 
                 mc:Ignorable="d"
                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
                 xmlns:viewmodel="clr-namespace:QuanLyThuVien.ViewModel" 
-                DataContext="{StaticResource MainVM}"
+                DataContext="{StaticResource HomeVM}"
                 TextElement.Foreground="{DynamicResource MaterialDesignBody}"
                 TextElement.FontWeight="Regular"
                 TextElement.FontSize="14"
@@ -16,8 +17,13 @@
                 TextOptions.TextRenderingMode="Auto"
                 Background="{DynamicResource MaterialDesignPaper}"
                 FontFamily="{DynamicResource MaterialDesignFont}"
-                x:Name="wdHome"
+                x:Name="HomeCT"
                 Height="454" Width="688">
+    <!--<i:Interaction.Triggers>
+        <ei:PropertyChangedTrigger Binding="{Binding Visibility, ElementName=HomeCT}">
+            <i:InvokeCommandAction Command="{Binding LoadCommand}" CommandParameter="{Binding ElementName=HomeCT}"/>
+        </ei:PropertyChangedTrigger>
+    </i:Interaction.Triggers>-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition ></RowDefinition>
@@ -47,13 +53,14 @@
                 <ColumnDefinition ></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
-            <Button Height="170" Width="300" x:Uid="0" x:Name="btnQuanLySach" Grid.Column="0" Background="#FF40BDC7">
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Image Source="/Images/QuanLySach.png" Width="130"/>
-                    <TextBlock Text="Quản lý sách" FontSize="18" TextAlignment="Center" Margin="0 5"></TextBlock>
-                </StackPanel>
-            </Button>
+            <Grid Grid.Column="0">
+                <Button Height="170" Width="300" x:Name="btnQuanLySach" Background="#FF40BDC7" Command="{Binding AddBook}" CommandParameter="{Binding ElementName=HomeCT}" >
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image Source="/Images/QuanLySach.png" Width="130"/>
+                        <TextBlock Text="Quản lý sách" FontSize="18" TextAlignment="Center" Margin="0 5"></TextBlock>
+                    </StackPanel>
+                </Button>
+            </Grid>
             <Grid Grid.Column="1" >
                 <Button Height="170" Width="300" Background="#FF40BDC7">
                     <Grid Height="165" Width="280">
@@ -64,14 +71,16 @@
                         <TextBlock Grid.Row="0" Text="Quản Lý mượn trả" FontSize="16" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" Width="240" />
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
-                            <Button Height="120" Width="80" x:Uid="1" x:Name="btnChoMuonSach" Background="#FF40BDC7" VerticalAlignment="Top">
+                            <Button Height="120" Width="80" x:Name="btnChoMuonSach" Background="#FF40BDC7" VerticalAlignment="Top"
+                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <StackPanel VerticalAlignment="Stretch" >
                                     <Image Source="/Images/MuonSach.png" Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
                                     <TextBlock Text="Cho mượn sách" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0 5"></TextBlock>
                                 </StackPanel>
                             </Button>
 
-                            <Button Height="120" Width="80" x:Uid="2" x:Name="btnTraSach" Background="#FF40BDC7" VerticalAlignment="Top">
+                            <Button Height="120" Width="80" x:Name="btnTraSach" Background="#FF40BDC7" VerticalAlignment="Top"
+                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <Border  x:Name="bdTraSach" VerticalAlignment="Top" Height="100" >
                                     <StackPanel VerticalAlignment="Stretch" >
                                         <Border CornerRadius="8"  VerticalAlignment="Top"  BorderThickness="2">
@@ -82,7 +91,8 @@
                                     </StackPanel>
                                 </Border>
                             </Button>
-                            <Button Height="120" Width="72" x:Uid="3" x:Name="btnThongTinChoMuon" Background="#FF40BDC7" VerticalAlignment="Top">
+                            <Button Height="120" Width="72" x:Name="btnThongTinChoMuon" Background="#FF40BDC7" VerticalAlignment="Top"
+                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <StackPanel VerticalAlignment="Stretch" >
                                     <Image Source="/Images/ThongTinMuonSach.png"  Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"  />
                                     <TextBlock Text="Thông tin cho mượn" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0 5"></TextBlock>
@@ -98,7 +108,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Height="170" Width="300" x:Uid="4" x:Name="btnQuanLyThe" Grid.Column="0" Background="#FF40BDC7">
+            <Button Height="170" Width="300" x:Name="btnQuanLyThe" Grid.Column="0" Background="#FF40BDC7" Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <Image Source="/Images/QuanLyThe.png" Width="130"/>
                     <TextBlock Text="Quản lý thẻ" FontSize="18" TextAlignment="Center" Margin="0 5"></TextBlock>
@@ -114,7 +124,8 @@
                         <TextBlock Grid.Row="0" Text="Khác" FontSize="16" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Width="240" />
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1">
-                            <Button Height="120" Width="80" x:Uid="5" x:Name="btnPhieuThuTienPhat" Background="#FF40BDC7" VerticalAlignment="Top">
+                            <Button Height="120" Width="80" x:Name="btnPhieuThuTienPhat" Background="#FF40BDC7" VerticalAlignment="Top"
+                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <StackPanel VerticalAlignment="Stretch" >
                                     <Image Source="/Images/PhieuThuTienPhat.png" Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
                                     <TextBlock Text="Phiếu thu tiền phạt" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0 5"></TextBlock>

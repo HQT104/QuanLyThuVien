@@ -1,0 +1,159 @@
+﻿<Window x:Class="QuanLyThuVien.DetailCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyThuVien"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStartupLocation="CenterScreen"
+        DataContext="{StaticResource CardVM}"
+        Name="detailCardWD"
+        Title="Thông tin sách" Height="520" Width="300"> 
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="0 10 0 0">
+            <TextBlock Text="Thông tin thẻ" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="87*"/>
+                <ColumnDefinition Width="59*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Images/QuanLyThe.png" Grid.ColumnSpan="2"  />
+        </Grid>
+        <Grid Grid.Row="2" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Họ và tên" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbCardName" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="3" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Mã số SV" />
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbCardMSSV" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="4" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Email" />
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txtCardEmail" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="5" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="SĐT" />
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbCardSDT" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="6" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Ngày lập thẻ" />
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbCardDate" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="7" Margin="16 0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Tình trạng mượn" />
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbCardBorrowedStatus" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="8" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Tổng nợ" />
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbCardTotalDebt" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="9" >
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#F73B4F" CornerRadius="15" Margin="0 20" Padding="20 2">
+                                    <Grid>
+                                        <ContentPresenter Margin="5" Cursor="Hand"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" HorizontalAlignment="Center">
+                <Button Content="Lưu" Foreground="White" FontSize="14"
+                    Command="{Binding EditCard}" CommandParameter="{Binding ElementName=detailCardWD}"></Button>
+            </Grid>
+            <Grid Grid.Column="1" HorizontalAlignment="Center">
+                <Button Content="Thoát" Foreground="White" FontSize="14"
+                    Command="{Binding ExitCard}" CommandParameter="{Binding ElementName=detailCardWD}"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
