@@ -1,0 +1,201 @@
+﻿<Window x:Class="QuanLyThuVien.DetailBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyThuVien"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStartupLocation="CenterScreen"
+        DataContext="{StaticResource BookVM}"
+        Name="detailBookWD"
+        Title="Thông tin sách" Height="560" Width="300">
+
+    <!--<Window.Resources>
+        <ControlTemplate x:Key="TextBox" TargetType="{x:Type TextBox}">
+            <Border Background="{TemplateBinding Background}" 
+            x:Name="Bd" BorderBrush="Black"
+            BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ComboboxRadius" TargetType="{x:Type ComboBox}">
+            <Grid>
+                <Border CornerRadius="10"  
+                        BorderThickness="1"  
+                        Background="{TemplateBinding Background}"  
+                        BorderBrush="Black">
+                    <ScrollViewer x:Name="PART_ContentHost"/>
+                </Border>
+            </Grid>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CheckBoxCircle" TargetType="{x:Type CheckBox}">
+            <BulletDecorator Background="Transparent" SnapsToDevicePixels="true">
+                <BulletDecorator.Bullet>
+                    <Border Background="#FFAEB3B9" BorderThickness="2" CornerRadius="10"/>
+                </BulletDecorator.Bullet>
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </BulletDecorator>
+        </ControlTemplate>
+
+    </Window.Resources>-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="0 10 0 0">
+            <TextBlock Text="Thông tin sách" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="87*"/>
+                <ColumnDefinition Width="59*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Images/Sach.jpg" Grid.ColumnSpan="2" />
+        </Grid>
+        <Grid Grid.Row="2" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Tên sách" VerticalAlignment="Center" />
+                <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbBookName" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+                </Border>
+        </Grid>
+        <Grid Grid.Row="3" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Thể loại" VerticalAlignment="Center"/>
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbBookCategory" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="4" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Tác giả" VerticalAlignment="Center"/>
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbBookAuthor" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="5" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Năm xuất bản" VerticalAlignment="Center"/>
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbBookPublicationYear" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="6" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Nhà xuất bản" VerticalAlignment="Center"/>
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbBookPulisher" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="7" Margin="16 0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Ngày nhập" VerticalAlignment="Center"/>
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbBookValue" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="8" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Giá trị" VerticalAlignment="Center"/>
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbBookImportDate" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="9" Margin="16 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text ="Số lượng" VerticalAlignment="Center" />
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+                <TextBox  x:Name="txbBookNumber" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
+                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="10" >
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#F73B4F" CornerRadius="15" Margin="0 20" Padding="20 2">
+                                    <Grid>
+                                        <ContentPresenter Margin="5" Cursor="Hand"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" HorizontalAlignment="Center">
+                <Button Content="Lưu" Foreground="White" FontSize="14"
+                    Command="{Binding EditBoook}" CommandParameter="{Binding ElementName=detailBookWD}"></Button>
+            </Grid>
+            <Grid Grid.Column="1" HorizontalAlignment="Center">
+                <Button Content="Thoát" Foreground="White" FontSize="14"
+                    Command="{Binding ExitBook}" CommandParameter="{Binding ElementName=detailBookWD}"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

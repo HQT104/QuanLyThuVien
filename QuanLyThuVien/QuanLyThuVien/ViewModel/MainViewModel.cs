@@ -14,13 +14,13 @@ namespace QuanLyThuVien.ViewModel
     {
         public ICommand SwitchTabCommand { get; set; }
         public ICommand GetUidCommand { get; set; }
-
         private string uid;
 
         public MainViewModel()
         {
             SwitchTabCommand = new RelayCommand<MainWindow>((p) => { return true; }, (p) => { SwitchTab(p); });
             GetUidCommand = new RelayCommand<Button>((p) => { return true; }, (p) => { uid = p.Uid; });
+          
         }
 
         public void SwitchTab(MainWindow mainWindow)
