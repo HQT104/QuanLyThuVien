@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuanLyThuVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CTPHIEUMUON">
+          <Key>
+            <PropertyRef Name="MAPHIEUMUON" />
+            <PropertyRef Name="MASACH" />
+          </Key>
+          <Property Name="MAPHIEUMUON" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="MASACH" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PHIEUMUON">
+          <Key>
+            <PropertyRef Name="MAPHIEUMUON" />
+          </Key>
+          <Property Name="MAPHIEUMUON" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="MATHE" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="NGAYMUON" Type="smalldatetime" Nullable="false" />
+          <Property Name="NGAYTRA" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PHIEUPHAT">
+          <Key>
+            <PropertyRef Name="MAPHIEUPHAT" />
+          </Key>
+          <Property Name="MAPHIEUPHAT" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="MATHE" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="SOTIENTHU" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PHIEUTRA">
+          <Key>
+            <PropertyRef Name="MAPHIEUTRA" />
+          </Key>
+          <Property Name="MAPHIEUTRA" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="MATHE" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="MAPHIEUMUON" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SACH">
+          <Key>
+            <PropertyRef Name="MASACH" />
+          </Key>
+          <Property Name="MASACH" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="TENSACH" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="TACGIA" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="NGAYXUATBAN" Type="datetime" Nullable="false" />
+          <Property Name="NHAXUATBAN" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="NGAYNHAP" Type="smalldatetime" Nullable="false" />
+          <Property Name="THELOAI" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TRIGIA" Type="money" Nullable="false" />
+          <Property Name="SOLUONG" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="THETV">
+          <Key>
+            <PropertyRef Name="MATHE" />
+          </Key>
+          <Property Name="MATHE" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="NGAYLAPTHE" Type="smalldatetime" Nullable="false" />
+          <Property Name="MASV" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="HOTENSV" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SODT" Type="varchar" MaxLength="20" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+          <Property Name="TINHTRANGMUON" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TONGNO" Type="money" />
+        </EntityType>
+        <Association Name="FK__CTPHIEUMU__MAPHI__2B3F6F97">
+          <End Role="PHIEUMUON" Type="Self.PHIEUMUON" Multiplicity="1" />
+          <End Role="CTPHIEUMUON" Type="Self.CTPHIEUMUON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIEUMUON">
+              <PropertyRef Name="MAPHIEUMUON" />
+            </Principal>
+            <Dependent Role="CTPHIEUMUON">
+              <PropertyRef Name="MAPHIEUMUON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTPHIEUMU__MASAC__2C3393D0">
+          <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
+          <End Role="CTPHIEUMUON" Type="Self.CTPHIEUMUON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SACH">
+              <PropertyRef Name="MASACH" />
+            </Principal>
+            <Dependent Role="CTPHIEUMUON">
+              <PropertyRef Name="MASACH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHIEUMUON__MATHE__286302EC">
+          <End Role="THETV" Type="Self.THETV" Multiplicity="1" />
+          <End Role="PHIEUMUON" Type="Self.PHIEUMUON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THETV">
+              <PropertyRef Name="MATHE" />
+            </Principal>
+            <Dependent Role="PHIEUMUON">
+              <PropertyRef Name="MATHE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHIEUPHAT__MATHE__32E0915F">
+          <End Role="THETV" Type="Self.THETV" Multiplicity="1" />
+          <End Role="PHIEUPHAT" Type="Self.PHIEUPHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THETV">
+              <PropertyRef Name="MATHE" />
+            </Principal>
+            <Dependent Role="PHIEUPHAT">
+              <PropertyRef Name="MATHE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHIEUTRA__MAPHIE__300424B4">
+          <End Role="PHIEUMUON" Type="Self.PHIEUMUON" Multiplicity="1" />
+          <End Role="PHIEUTRA" Type="Self.PHIEUTRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIEUMUON">
+              <PropertyRef Name="MAPHIEUMUON" />
+            </Principal>
+            <Dependent Role="PHIEUTRA">
+              <PropertyRef Name="MAPHIEUMUON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHIEUTRA__MATHE__2F10007B">
+          <End Role="THETV" Type="Self.THETV" Multiplicity="1" />
+          <End Role="PHIEUTRA" Type="Self.PHIEUTRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THETV">
+              <PropertyRef Name="MATHE" />
+            </Principal>
+            <Dependent Role="PHIEUTRA">
+              <PropertyRef Name="MATHE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLyThuVienModelStoreContainer">
+          <EntitySet Name="CTPHIEUMUON" EntityType="Self.CTPHIEUMUON" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHIEUMUON" EntityType="Self.PHIEUMUON" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHIEUPHAT" EntityType="Self.PHIEUPHAT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHIEUTRA" EntityType="Self.PHIEUTRA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THETV" EntityType="Self.THETV" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CTPHIEUMU__MAPHI__2B3F6F97" Association="Self.FK__CTPHIEUMU__MAPHI__2B3F6F97">
+            <End Role="PHIEUMUON" EntitySet="PHIEUMUON" />
+            <End Role="CTPHIEUMUON" EntitySet="CTPHIEUMUON" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTPHIEUMU__MASAC__2C3393D0" Association="Self.FK__CTPHIEUMU__MASAC__2C3393D0">
+            <End Role="SACH" EntitySet="SACH" />
+            <End Role="CTPHIEUMUON" EntitySet="CTPHIEUMUON" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHIEUMUON__MATHE__286302EC" Association="Self.FK__PHIEUMUON__MATHE__286302EC">
+            <End Role="THETV" EntitySet="THETV" />
+            <End Role="PHIEUMUON" EntitySet="PHIEUMUON" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHIEUPHAT__MATHE__32E0915F" Association="Self.FK__PHIEUPHAT__MATHE__32E0915F">
+            <End Role="THETV" EntitySet="THETV" />
+            <End Role="PHIEUPHAT" EntitySet="PHIEUPHAT" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHIEUTRA__MAPHIE__300424B4" Association="Self.FK__PHIEUTRA__MAPHIE__300424B4">
+            <End Role="PHIEUMUON" EntitySet="PHIEUMUON" />
+            <End Role="PHIEUTRA" EntitySet="PHIEUTRA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHIEUTRA__MATHE__2F10007B" Association="Self.FK__PHIEUTRA__MATHE__2F10007B">
+            <End Role="THETV" EntitySet="THETV" />
+            <End Role="PHIEUTRA" EntitySet="PHIEUTRA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanLyThuVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PHIEUMUON">
+          <Key>
+            <PropertyRef Name="MAPHIEUMUON" />
+          </Key>
+          <Property Name="MAPHIEUMUON" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MATHE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NGAYMUON" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="NGAYTRA" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="THETV" Relationship="Self.FK__PHIEUMUON__MATHE__286302EC" FromRole="PHIEUMUON" ToRole="THETV" />
+          <NavigationProperty Name="PHIEUTRAs" Relationship="Self.FK__PHIEUTRA__MAPHIE__300424B4" FromRole="PHIEUMUON" ToRole="PHIEUTRA" />
+          <NavigationProperty Name="SACHes" Relationship="Self.CTPHIEUMUON" FromRole="PHIEUMUON" ToRole="SACH" />
+        </EntityType>
+        <EntityType Name="PHIEUPHAT">
+          <Key>
+            <PropertyRef Name="MAPHIEUPHAT" />
+          </Key>
+          <Property Name="MAPHIEUPHAT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MATHE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="SOTIENTHU" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="THETV" Relationship="Self.FK__PHIEUPHAT__MATHE__32E0915F" FromRole="PHIEUPHAT" ToRole="THETV" />
+        </EntityType>
+        <EntityType Name="PHIEUTRA">
+          <Key>
+            <PropertyRef Name="MAPHIEUTRA" />
+          </Key>
+          <Property Name="MAPHIEUTRA" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MATHE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MAPHIEUMUON" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PHIEUMUON" Relationship="Self.FK__PHIEUTRA__MAPHIE__300424B4" FromRole="PHIEUTRA" ToRole="PHIEUMUON" />
+          <NavigationProperty Name="THETV" Relationship="Self.FK__PHIEUTRA__MATHE__2F10007B" FromRole="PHIEUTRA" ToRole="THETV" />
+        </EntityType>
+        <EntityType Name="SACH">
+          <Key>
+            <PropertyRef Name="MASACH" />
+          </Key>
+          <Property Name="MASACH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENSACH" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TACGIA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NGAYXUATBAN" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NHAXUATBAN" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NGAYNHAP" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="THELOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TRIGIA" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SOLUONG" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PHIEUMUONs" Relationship="Self.CTPHIEUMUON" FromRole="SACH" ToRole="PHIEUMUON" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="THETV">
+          <Key>
+            <PropertyRef Name="MATHE" />
+          </Key>
+          <Property Name="MATHE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NGAYLAPTHE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MASV" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HOTENSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SODT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TINHTRANGMUON" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TONGNO" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="PHIEUMUONs" Relationship="Self.FK__PHIEUMUON__MATHE__286302EC" FromRole="THETV" ToRole="PHIEUMUON" />
+          <NavigationProperty Name="PHIEUPHATs" Relationship="Self.FK__PHIEUPHAT__MATHE__32E0915F" FromRole="THETV" ToRole="PHIEUPHAT" />
+          <NavigationProperty Name="PHIEUTRAs" Relationship="Self.FK__PHIEUTRA__MATHE__2F10007B" FromRole="THETV" ToRole="PHIEUTRA" />
+        </EntityType>
+        <Association Name="FK__PHIEUMUON__MATHE__286302EC">
+          <End Role="THETV" Type="Self.THETV" Multiplicity="1" />
+          <End Role="PHIEUMUON" Type="Self.PHIEUMUON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THETV">
+              <PropertyRef Name="MATHE" />
+            </Principal>
+            <Dependent Role="PHIEUMUON">
+              <PropertyRef Name="MATHE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHIEUTRA__MAPHIE__300424B4">
+          <End Role="PHIEUMUON" Type="Self.PHIEUMUON" Multiplicity="1" />
+          <End Role="PHIEUTRA" Type="Self.PHIEUTRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIEUMUON">
+              <PropertyRef Name="MAPHIEUMUON" />
+            </Principal>
+            <Dependent Role="PHIEUTRA">
+              <PropertyRef Name="MAPHIEUMUON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHIEUPHAT__MATHE__32E0915F">
+          <End Role="THETV" Type="Self.THETV" Multiplicity="1" />
+          <End Role="PHIEUPHAT" Type="Self.PHIEUPHAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THETV">
+              <PropertyRef Name="MATHE" />
+            </Principal>
+            <Dependent Role="PHIEUPHAT">
+              <PropertyRef Name="MATHE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PHIEUTRA__MATHE__2F10007B">
+          <End Role="THETV" Type="Self.THETV" Multiplicity="1" />
+          <End Role="PHIEUTRA" Type="Self.PHIEUTRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THETV">
+              <PropertyRef Name="MATHE" />
+            </Principal>
+            <Dependent Role="PHIEUTRA">
+              <PropertyRef Name="MATHE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CTPHIEUMUON">
+          <End Role="PHIEUMUON" Type="Self.PHIEUMUON" Multiplicity="*" />
+          <End Role="SACH" Type="Self.SACH" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="QuanLyThuVienEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PHIEUMUONs" EntityType="Self.PHIEUMUON" />
+          <EntitySet Name="PHIEUPHATs" EntityType="Self.PHIEUPHAT" />
+          <EntitySet Name="PHIEUTRAs" EntityType="Self.PHIEUTRA" />
+          <EntitySet Name="SACHes" EntityType="Self.SACH" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="THETVs" EntityType="Self.THETV" />
+          <AssociationSet Name="FK__PHIEUMUON__MATHE__286302EC" Association="Self.FK__PHIEUMUON__MATHE__286302EC">
+            <End Role="THETV" EntitySet="THETVs" />
+            <End Role="PHIEUMUON" EntitySet="PHIEUMUONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHIEUTRA__MAPHIE__300424B4" Association="Self.FK__PHIEUTRA__MAPHIE__300424B4">
+            <End Role="PHIEUMUON" EntitySet="PHIEUMUONs" />
+            <End Role="PHIEUTRA" EntitySet="PHIEUTRAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHIEUPHAT__MATHE__32E0915F" Association="Self.FK__PHIEUPHAT__MATHE__32E0915F">
+            <End Role="THETV" EntitySet="THETVs" />
+            <End Role="PHIEUPHAT" EntitySet="PHIEUPHATs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PHIEUTRA__MATHE__2F10007B" Association="Self.FK__PHIEUTRA__MATHE__2F10007B">
+            <End Role="THETV" EntitySet="THETVs" />
+            <End Role="PHIEUTRA" EntitySet="PHIEUTRAs" />
+          </AssociationSet>
+          <AssociationSet Name="CTPHIEUMUON" Association="Self.CTPHIEUMUON">
+            <End Role="PHIEUMUON" EntitySet="PHIEUMUONs" />
+            <End Role="SACH" EntitySet="SACHes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanLyThuVienModelStoreContainer" CdmEntityContainer="QuanLyThuVienEntities">
+          <EntitySetMapping Name="PHIEUMUONs">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.PHIEUMUON">
+              <MappingFragment StoreEntitySet="PHIEUMUON">
+                <ScalarProperty Name="MAPHIEUMUON" ColumnName="MAPHIEUMUON" />
+                <ScalarProperty Name="MATHE" ColumnName="MATHE" />
+                <ScalarProperty Name="NGAYMUON" ColumnName="NGAYMUON" />
+                <ScalarProperty Name="NGAYTRA" ColumnName="NGAYTRA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHIEUPHATs">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.PHIEUPHAT">
+              <MappingFragment StoreEntitySet="PHIEUPHAT">
+                <ScalarProperty Name="MAPHIEUPHAT" ColumnName="MAPHIEUPHAT" />
+                <ScalarProperty Name="MATHE" ColumnName="MATHE" />
+                <ScalarProperty Name="SOTIENTHU" ColumnName="SOTIENTHU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHIEUTRAs">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.PHIEUTRA">
+              <MappingFragment StoreEntitySet="PHIEUTRA">
+                <ScalarProperty Name="MAPHIEUTRA" ColumnName="MAPHIEUTRA" />
+                <ScalarProperty Name="MATHE" ColumnName="MATHE" />
+                <ScalarProperty Name="MAPHIEUMUON" ColumnName="MAPHIEUMUON" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SACHes">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.SACH">
+              <MappingFragment StoreEntitySet="SACH">
+                <ScalarProperty Name="MASACH" ColumnName="MASACH" />
+                <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+                <ScalarProperty Name="TACGIA" ColumnName="TACGIA" />
+                <ScalarProperty Name="NGAYXUATBAN" ColumnName="NGAYXUATBAN" />
+                <ScalarProperty Name="NHAXUATBAN" ColumnName="NHAXUATBAN" />
+                <ScalarProperty Name="NGAYNHAP" ColumnName="NGAYNHAP" />
+                <ScalarProperty Name="THELOAI" ColumnName="THELOAI" />
+                <ScalarProperty Name="TRIGIA" ColumnName="TRIGIA" />
+                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THETVs">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.THETV">
+              <MappingFragment StoreEntitySet="THETV">
+                <ScalarProperty Name="MATHE" ColumnName="MATHE" />
+                <ScalarProperty Name="NGAYLAPTHE" ColumnName="NGAYLAPTHE" />
+                <ScalarProperty Name="MASV" ColumnName="MASV" />
+                <ScalarProperty Name="HOTENSV" ColumnName="HOTENSV" />
+                <ScalarProperty Name="SODT" ColumnName="SODT" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TINHTRANGMUON" ColumnName="TINHTRANGMUON" />
+                <ScalarProperty Name="TONGNO" ColumnName="TONGNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="CTPHIEUMUON" TypeName="QuanLyThuVienModel.CTPHIEUMUON" StoreEntitySet="CTPHIEUMUON">
+            <EndProperty Name="PHIEUMUON">
+              <ScalarProperty Name="MAPHIEUMUON" ColumnName="MAPHIEUMUON" />
+            </EndProperty>
+            <EndProperty Name="SACH">
+              <ScalarProperty Name="MASACH" ColumnName="MASACH" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

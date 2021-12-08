@@ -34,7 +34,7 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Height="60" >
                     <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBlock  FontSize="30" FontWeight="Bold" Text="Tiếp nhận sách mới" Margin="51,0,-52,0" ></TextBlock>
+                        <TextBlock  FontSize="30" FontWeight="Bold" Text="Thêm thẻ" Margin="51,0,-52,0" ></TextBlock>
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="1" Margin="50 0">

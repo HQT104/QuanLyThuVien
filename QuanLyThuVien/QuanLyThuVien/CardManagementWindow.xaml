@@ -9,7 +9,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         xmlns:viewmodel="clr-namespace:QuanLyThuVien.ViewModel" 
-        DataContext="{StaticResource HomeVM}"
+        DataContext="{StaticResource CardVM}"
         x:Name="CardWD"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -19,11 +19,11 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
             d:DesignHeight="623" d:DesignWidth="920">
-    <i:Interaction.Triggers>
+    <!--<i:Interaction.Triggers>
         <ei:PropertyChangedTrigger Binding="{Binding Visibility, ElementName=CardCT}">
             <i:InvokeCommandAction Command="{Binding LoadCommand}" CommandParameter="{Binding ElementName=CardCT}"/>
         </ei:PropertyChangedTrigger>
-    </i:Interaction.Triggers>
+    </i:Interaction.Triggers>-->
 
     <Grid >
         <Border Background="#FF4699DA" >
