@@ -17,19 +17,16 @@ namespace QuanLyThuVien.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PHIEUMUON()
         {
-            this.PHIEUTRAs = new HashSet<PHIEUTRA>();
-            this.SACHes = new HashSet<SACH>();
+            this.CTPHIEUMUONs = new HashSet<CTPHIEUMUON>();
         }
     
         public string MAPHIEUMUON { get; set; }
-        public string MATHE { get; set; }
+        public string MASV { get; set; }
         public System.DateTime NGAYMUON { get; set; }
         public System.DateTime NGAYTRA { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTPHIEUMUON> CTPHIEUMUONs { get; set; }
         public virtual THETV THETV { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUTRA> PHIEUTRAs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SACH> SACHes { get; set; }
     }
 }

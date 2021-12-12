@@ -15,12 +15,12 @@ namespace QuanLyThuVien.ViewModel
     class LoginViewModel : BaseViewModel
     {
         public ICommand LoginCommand { get; set; }
-        
+
 
         public LoginViewModel()
         {
             LoginCommand = new RelayCommand<LoginWindow>((p) => { return true; }, (p) => { Login(p); });
-            
+
         }
 
         public void Login(LoginWindow loginWindow)

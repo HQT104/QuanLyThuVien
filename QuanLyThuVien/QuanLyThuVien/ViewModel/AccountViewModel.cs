@@ -14,7 +14,7 @@ using System.Windows.Media;
 
 namespace QuanLyThuVien.ViewModel
 {
-    internal class AccountViewModel : BaseViewModel
+    class AccountViewModel : BaseViewModel
     {
     }
 }

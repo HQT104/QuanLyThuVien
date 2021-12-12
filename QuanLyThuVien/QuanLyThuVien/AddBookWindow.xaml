@@ -101,7 +101,7 @@
                                          VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
                         </TextBox>
                     </Border>
-                </Grid> 
+                </Grid>
                 <Grid Grid.Row="4" Margin="50 0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.5*"></ColumnDefinition>
@@ -172,7 +172,7 @@
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
                                 <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                                 </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
                             <Grid.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="Background" Value="#FFA9C0E2"></Setter>

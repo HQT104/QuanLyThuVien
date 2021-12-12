@@ -14,7 +14,7 @@ using System.Windows.Media;
 
 namespace QuanLyThuVien.ViewModel
 {
-    internal class RegulationViewModel : BaseViewModel
+    class RegulationViewModel : BaseViewModel
     {
     }
 }

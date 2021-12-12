@@ -44,7 +44,7 @@
                                     <Image Source="/Images/TrangChu.jpg" Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
                                 </StackPanel>
                             </Border>
-                        </Button>                 
+                        </Button>
                     </Grid>
 
                 </Grid>

@@ -17,13 +17,13 @@ namespace QuanLyThuVien.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SACH()
         {
-            this.PHIEUMUONs = new HashSet<PHIEUMUON>();
+            this.CTPHIEUMUONs = new HashSet<CTPHIEUMUON>();
         }
     
         public string MASACH { get; set; }
         public string TENSACH { get; set; }
         public string TACGIA { get; set; }
-        public System.DateTime NGAYXUATBAN { get; set; }
+        public int NAMXUATBAN { get; set; }
         public string NHAXUATBAN { get; set; }
         public System.DateTime NGAYNHAP { get; set; }
         public string THELOAI { get; set; }
@@ -31,6 +31,6 @@ namespace QuanLyThuVien.Model
         public int SOLUONG { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUMUON> PHIEUMUONs { get; set; }
+        public virtual ICollection<CTPHIEUMUON> CTPHIEUMUONs { get; set; }
     }
 }

@@ -14,7 +14,7 @@ using System.Windows.Media;
 
 namespace QuanLyThuVien.ViewModel
 {
-    internal class ReportViewModel : BaseViewModel
+    class ReportViewModel : BaseViewModel
     {
     }
 }

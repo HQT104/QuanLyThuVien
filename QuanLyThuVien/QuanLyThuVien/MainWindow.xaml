@@ -46,15 +46,14 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
             <Button x:Name="btnHome" Grid.Row="1" Uid="1">
                 <Grid  Width="70" Height="70">
-                    <Border x:Name="bdHome" Background="#FF4699DA" CornerRadius="20" >
+                    <Border x:Name="bdHome" CornerRadius="20" Background="White">
                         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <materialDesign:PackIcon x:Name="icHome" HorizontalAlignment="Center" Kind="HomeOutline" Width="30" Height="30" Foreground="White"/>
-                            <TextBlock x:Name="txtHome" Text="Home" Foreground="White"></TextBlock>
+                            <materialDesign:PackIcon x:Name="icHome" HorizontalAlignment="Center" Kind="HomeOutline" Width="30" Height="30" Foreground="Black"/>
+                            <TextBlock x:Name="txtHome" Text="Home" Foreground="Black"></TextBlock>
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -68,28 +67,9 @@
                 </i:Interaction.Triggers>
             </Button>
 
-
-            <Button x:Name="btnReport" Grid.Row="2" Uid="2" >
-                <Grid Width="70" Height="70">
-                    <Border x:Name="bdReport" Background="White" CornerRadius="20">
-                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <materialDesign:PackIcon x:Name="icReport" HorizontalAlignment="Center" Kind="ChartBar" Width="30" Height="30" Foreground="Black"/>
-                            <TextBlock x:Name="txtReport" Text="Báo cáo" Foreground="Black" ></TextBlock>
-                        </StackPanel>
-                    </Border>
-                </Grid>
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="Click">
-                        <i:InvokeCommandAction Command="{Binding SwitchTabCommand}" CommandParameter="{Binding ElementName=wdMain}"/>
-                    </i:EventTrigger>
-                    <i:EventTrigger EventName="MouseMove">
-                        <i:InvokeCommandAction Command="{Binding GetUidCommand}" CommandParameter="{Binding ElementName=btnReport}"/>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-            </Button>
-            <Button x:Name="btnAccount" Grid.Row="3" Uid="3">
+            <Button x:Name="btnAccount" Grid.Row="2" Uid="2">
                 <Grid  Width="70" Height="70">
-                    <Border x:Name="bdAccount"  Background="White" CornerRadius="20">
+                    <Border x:Name="bdAccount"  Background="#FF4699DA" CornerRadius="20">
                         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                             <materialDesign:PackIcon x:Name="icAccount" HorizontalAlignment="Center" Kind="AccountMultipleOutline" Width="30" Height="30" Foreground="Black"/>
                             <TextBlock x:Name="txtAccount" Text="Tài khoản" Foreground="Black" ></TextBlock>
@@ -105,9 +85,9 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
-            <Button x:Name="btnRegulation" Grid.Row="4" Uid="4">
+            <Button x:Name="btnRegulation" Grid.Row="3" Uid="3">
                 <Grid  Width="70" Height="70">
-                    <Border x:Name="bdRegulation" Background="White" CornerRadius="20">
+                    <Border x:Name="bdRegulation" Background="#FF4699DA" CornerRadius="20">
                         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                             <materialDesign:PackIcon x:Name="icRegulation" HorizontalAlignment="Center" Kind="Settings" Width="30" Height="30" Foreground="Black"/>
                             <TextBlock x:Name="txtRegulation" Text="Quy định" Foreground="Black" ></TextBlock>
@@ -126,10 +106,8 @@
         </Grid>
         <Grid Grid.Column="1">
             <uc:HomeControl x:Name="Home" Visibility="Visible"></uc:HomeControl>
-            <uc:RegulationControl x:Name="Regulation" Visibility="Hidden"></uc:RegulationControl>
-            <uc:ReportControl x:Name="Report" Visibility="Hidden"></uc:ReportControl>
             <uc:AccountControl x:Name="Account" Visibility="Hidden"></uc:AccountControl>
-
+            <uc:RegulationControl x:Name="Regulation" Visibility="Hidden"></uc:RegulationControl>
         </Grid>
     </Grid>
 </Window>

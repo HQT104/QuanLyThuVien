@@ -23,6 +23,5 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
-
     }
 }

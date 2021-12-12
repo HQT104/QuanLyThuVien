@@ -4,18 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a8ad71fdcb454ab788c6db2db41ddfd3" Name="Diagram1">
-        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUMUON" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUPHAT" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUTRA" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.SACH" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.THETV" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUMUON__MATHE__286302EC" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUTRA__MAPHIE__300424B4" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUPHAT__MATHE__32E0915F" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUTRA__MATHE__2F10007B" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyThuVienModel.CTPHIEUMUON" ManuallyRouted="false" />
+      <Diagram DiagramId="67ce8c7e12ab4ed882ccaf167276b93f" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyThuVienModel.CTPHIEUMUON" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUMUON" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUPHAT" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.SACH" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.TAIKHOAN" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.THETV" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__CTPHIEUMU__MAPHI__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__CTPHIEUMU__MASAC__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUMUON__MASV__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUPHAT__MASV__30F848ED" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

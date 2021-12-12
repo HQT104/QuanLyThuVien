@@ -100,7 +100,7 @@
                         </TextBox>
                     </Border>
                 </Grid>
-               
+
                 <Grid Grid.Row="4" >
                     <Grid.Resources>
                         <Style TargetType="Button">
@@ -126,15 +126,13 @@
                     <StackPanel Margin="20 5">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
                                 <ColumnDefinition Width="1.5*"></ColumnDefinition>
                                 <ColumnDefinition ></ColumnDefinition>
-                                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
-                             </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
                             <Grid.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="Background" Value="#FFA9C0E2"></Setter>
@@ -149,7 +147,7 @@
                             </Grid.Resources>
                             <Grid Grid.Column="0">
                                 <Border CornerRadius="10 0 0 0">
-                                    <TextBlock Text="Mã thẻ"></TextBlock>
+                                    <TextBlock Text="Mã SV"></TextBlock>
                                 </Border>
                             </Grid>
                             <Grid Grid.Column="1">
@@ -159,30 +157,20 @@
                             </Grid>
                             <Grid Grid.Column="2">
                                 <Border>
-                                    <TextBlock Text="Mã SV"></TextBlock>
+                                    <TextBlock Text="Email"></TextBlock>
                                 </Border>
                             </Grid>
                             <Grid Grid.Column="3">
                                 <Border>
-                                    <TextBlock Text="Email"></TextBlock>
+                                    <TextBlock Text="SĐT"></TextBlock>
                                 </Border>
                             </Grid>
                             <Grid Grid.Column="4">
                                 <Border>
-                                    <TextBlock Text="SĐT"></TextBlock>
-                                </Border>
-                            </Grid>
-                            <Grid Grid.Column="5">
-                                <Border>
                                     <TextBlock Text="Ngày lập thẻ"></TextBlock>
                                 </Border>
                             </Grid>
-                            <Grid Grid.Column="6">
-                                <Border>
-                                    <TextBlock Text="Tình trạng mượn"></TextBlock>
-                                </Border>
-                            </Grid>
-                            <Grid Grid.Column="7" >
+                            <Grid Grid.Column="5" >
                                 <Border CornerRadius="0 10 0 0" >
                                     <TextBlock Text="Tổng nợ"></TextBlock>
                                 </Border>
@@ -214,8 +202,8 @@
                                 Value="20" IsIndeterminate="True" Grid.Column="1" Margin="74,185,191.5,185"/>
                         </Grid>
                     </StackPanel>
-            </Grid>
-            <Grid Grid.Row="6" >
+                </Grid>
+                <Grid Grid.Row="6" >
                     <Grid.Resources>
                         <Style TargetType="Button">
                             <Setter Property="Template">
@@ -237,7 +225,7 @@
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0" HorizontalAlignment="Center">
                         <Button Content="Xác nhận" Foreground="White" FontSize="14"
-                    Command="{Binding ComfirmCard}" CommandParameter="{Binding ElementName=addCardWD}"></Button>
+                    Command="{Binding SubmitAddCard}" CommandParameter="{Binding ElementName=addCardWD}"></Button>
                     </Grid>
                     <Grid Grid.Column="1" HorizontalAlignment="Center">
                         <Button Content="Thoát" Foreground="White" FontSize="14"

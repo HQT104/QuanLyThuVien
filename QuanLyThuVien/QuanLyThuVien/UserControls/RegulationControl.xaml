@@ -19,6 +19,6 @@
                 x:Name="wdRegulation"
                 Height="404" Width="688">
     <Grid Background="Aqua">
-        
+
     </Grid>
 </UserControl>

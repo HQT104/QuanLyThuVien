@@ -19,23 +19,18 @@ namespace QuanLyThuVien.Model
         {
             this.PHIEUMUONs = new HashSet<PHIEUMUON>();
             this.PHIEUPHATs = new HashSet<PHIEUPHAT>();
-            this.PHIEUTRAs = new HashSet<PHIEUTRA>();
         }
     
-        public string MATHE { get; set; }
-        public System.DateTime NGAYLAPTHE { get; set; }
         public string MASV { get; set; }
+        public System.DateTime NGAYLAPTHE { get; set; }
         public string HOTENSV { get; set; }
         public string SODT { get; set; }
         public string EMAIL { get; set; }
-        public string TINHTRANGMUON { get; set; }
         public Nullable<decimal> TONGNO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHIEUMUON> PHIEUMUONs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHIEUPHAT> PHIEUPHATs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUTRA> PHIEUTRAs { get; set; }
     }
 }

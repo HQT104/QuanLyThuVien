@@ -25,11 +25,11 @@ namespace QuanLyThuVien.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<CTPHIEUMUON> CTPHIEUMUONs { get; set; }
         public virtual DbSet<PHIEUMUON> PHIEUMUONs { get; set; }
         public virtual DbSet<PHIEUPHAT> PHIEUPHATs { get; set; }
-        public virtual DbSet<PHIEUTRA> PHIEUTRAs { get; set; }
         public virtual DbSet<SACH> SACHes { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
         public virtual DbSet<THETV> THETVs { get; set; }
     }
 }

@@ -78,11 +78,11 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <TextBox Grid.Column="0" Text ="Tên sách" VerticalAlignment="Center" />
-                <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
+            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
                 <TextBox  x:Name="txbBookName" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
                                          VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
                 </TextBox>
-                </Border>
+            </Border>
         </Grid>
         <Grid Grid.Row="3" Margin="16 0">
             <Grid.ColumnDefinitions>

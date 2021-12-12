@@ -17,13 +17,12 @@
         WindowStartupLocation="CenterScreen"
         DataContext="{StaticResource CardVM}"
         Name="detailCardWD"
-        Title="Thông tin sách" Height="520" Width="300"> 
+        Title="Thông tin sách" Height="500" Width="300">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
@@ -102,19 +101,7 @@
                 </TextBox>
             </Border>
         </Grid>
-        <Grid Grid.Row="7" Margin="16 0" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Text ="Tình trạng mượn" />
-            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
-                <TextBox  x:Name="txbCardBorrowedStatus" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
-                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
-                </TextBox>
-            </Border>
-        </Grid>
-        <Grid Grid.Row="8" Margin="16 0">
+        <Grid Grid.Row="7" Margin="16 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.75*"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -126,7 +113,7 @@
                 </TextBox>
             </Border>
         </Grid>
-        <Grid Grid.Row="9" >
+        <Grid Grid.Row="8" >
             <Grid.Resources>
                 <Style TargetType="Button">
                     <Setter Property="Template">

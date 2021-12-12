@@ -15,7 +15,7 @@ namespace QuanLyThuVien.Model
     public partial class PHIEUPHAT
     {
         public string MAPHIEUPHAT { get; set; }
-        public string MATHE { get; set; }
+        public string MASV { get; set; }
         public decimal SOTIENTHU { get; set; }
     
         public virtual THETV THETV { get; set; }

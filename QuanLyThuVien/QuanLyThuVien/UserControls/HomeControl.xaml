@@ -131,6 +131,19 @@
                                     <TextBlock Text="Phiếu thu tiền phạt" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0 5"></TextBlock>
                                 </StackPanel>
                             </Button>
+                            <Button Height="120" Width="80" x:Name="btnBaoCao" Background="#FF40BDC7" VerticalAlignment="Top"
+                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
+                                <Border  x:Name="bdBaoCao" VerticalAlignment="Top" Height="100" >
+                                    <StackPanel VerticalAlignment="Stretch" >
+                                        <Border CornerRadius="8"  VerticalAlignment="Top"  BorderThickness="2">
+                                            <Image Source="/Images/chart-bar.png"   Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"  />
+                                        </Border>
+                                        <TextBlock Text="Báo cáo" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0 5"></TextBlock>
+                                    </StackPanel>
+                                </Border>
+                            </Button>
+
+
                         </StackPanel>
                     </Grid>
 
