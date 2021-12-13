@@ -86,7 +86,7 @@
                                 </Setter>
                             </Style>
                         </Grid.Resources>
-                        <Button Command="{Binding OpenAddBook}" CommandParameter="{Binding ElementName=BookWD}"
+                        <Button Command="{Binding OpenAddBook}" CommandParameter="{Binding ElementName=bookList}"
                                 Content="Thêm sách" Foreground="White" FontSize="18" Background="red" FontWeight="Bold"></Button>
                     </Grid>
                     <Grid Grid.Column="1" HorizontalAlignment="Left" Margin="100 0 0 0">
@@ -126,15 +126,15 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0.6*"></ColumnDefinition>
-                                <ColumnDefinition Width="1.5*"></ColumnDefinition>
-                                <ColumnDefinition Width="0.5*"></ColumnDefinition>
-                                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1.2*"></ColumnDefinition>
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
                                 <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.75*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid.Resources>
                                 <Style TargetType="Border">

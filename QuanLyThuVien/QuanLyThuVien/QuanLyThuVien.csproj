@@ -79,6 +79,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CardManagementWindow.xaml.cs">
+      <DependentUpon>CardManagementWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\CTPHIEUMUON.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -110,11 +113,20 @@
     <Compile Include="Model\TAIKHOAN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\THAMSO.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\THETV.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AccountControl.xaml.cs">
       <DependentUpon>AccountControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BookDetailControl.xaml.cs">
+      <DependentUpon>BookDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CardDetailControl.xaml.cs">
+      <DependentUpon>CardDetailControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\HomeControl.xaml.cs">
       <DependentUpon>HomeControl.xaml</DependentUpon>
@@ -179,9 +191,6 @@
     <Compile Include="BookManagementWindow.xaml.cs">
       <DependentUpon>BookManagementWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CardManagementWindow.xaml.cs">
-      <DependentUpon>CardManagementWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DetailBookWindow.xaml.cs">
       <DependentUpon>DetailBookWindow.xaml</DependentUpon>
     </Compile>
@@ -200,6 +209,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\AccountControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BookDetailControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CardDetailControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

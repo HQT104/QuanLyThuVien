@@ -24,20 +24,20 @@
     </Key>
     <Property Name="MAPHIEUPHAT" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="MASV" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="SOTIENTHU" Type="money" Nullable="false" />
+    <Property Name="SOTIENTHU" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SACH">
     <Key>
       <PropertyRef Name="MASACH" />
     </Key>
     <Property Name="MASACH" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="TENSACH" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="TACGIA" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="TENSACH" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="TACGIA" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="NAMXUATBAN" Type="int" Nullable="false" />
     <Property Name="NHAXUATBAN" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="NGAYNHAP" Type="smalldatetime" Nullable="false" />
-    <Property Name="THELOAI" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="TRIGIA" Type="money" Nullable="false" />
+    <Property Name="THELOAI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRIGIA" Type="int" Nullable="false" />
     <Property Name="SOLUONG" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TAIKHOAN">
@@ -50,16 +50,22 @@
     <Property Name="GIOITINH" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="NAMSINH" Type="int" Nullable="false" />
     <Property Name="SDT" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6013: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="THAMSO">
-          <Property Name="SONAMXUATBAN" Type="int" />
-          <Property Name="SLSACHMUON" Type="smallint" />
-          <Property Name="THOIGIANMUON" Type="smallint" />
-          <Property Name="SOTIENPHAT" Type="money" />
-        </EntityType>-->
+warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="THAMSO">
+    <Key>
+      <PropertyRef Name="SONAMXUATBAN" />
+      <PropertyRef Name="SLSACHMUON" />
+      <PropertyRef Name="THOIGIANMUON" />
+      <PropertyRef Name="SOTIENPHAT" />
+    </Key>
+    <Property Name="SONAMXUATBAN" Type="int" Nullable="false" />
+    <Property Name="SLSACHMUON" Type="smallint" Nullable="false" />
+    <Property Name="THOIGIANMUON" Type="smallint" Nullable="false" />
+    <Property Name="SOTIENPHAT" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="THETV">
     <Key>
       <PropertyRef Name="MASV" />
@@ -67,9 +73,9 @@ warning 6013: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
     <Property Name="MASV" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="NGAYLAPTHE" Type="smalldatetime" Nullable="false" />
     <Property Name="HOTENSV" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="SODT" Type="varchar" MaxLength="20" />
-    <Property Name="EMAIL" Type="varchar" MaxLength="100" />
-    <Property Name="TONGNO" Type="money" />
+    <Property Name="SODT" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TONGNO" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK__CTPHIEUMU__MAPHI__2D27B809">
     <End Role="PHIEUMUON" Type="Self.PHIEUMUON" Multiplicity="1" />
@@ -126,6 +132,14 @@ warning 6013: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
     <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="THETV" EntityType="Self.THETV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THAMSO" EntityType="Self.THAMSO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [THAMSO].[SONAMXUATBAN] AS [SONAMXUATBAN], 
+    [THAMSO].[SLSACHMUON] AS [SLSACHMUON], 
+    [THAMSO].[THOIGIANMUON] AS [THOIGIANMUON], 
+    [THAMSO].[SOTIENPHAT] AS [SOTIENPHAT]
+    FROM [dbo].[THAMSO] AS [THAMSO]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK__CTPHIEUMU__MAPHI__2D27B809" Association="Self.FK__CTPHIEUMU__MAPHI__2D27B809">
       <End Role="PHIEUMUON" EntitySet="PHIEUMUON" />
       <End Role="CTPHIEUMUON" EntitySet="CTPHIEUMUON" />

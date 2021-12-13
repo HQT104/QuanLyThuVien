@@ -31,5 +31,6 @@ namespace QuanLyThuVien.Model
         public virtual DbSet<SACH> SACHes { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
         public virtual DbSet<THETV> THETVs { get; set; }
+        public virtual DbSet<THAMSO> THAMSOes { get; set; }
     }
 }

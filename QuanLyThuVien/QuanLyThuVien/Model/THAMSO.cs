@@ -12,12 +12,11 @@ namespace QuanLyThuVien.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class PHIEUPHAT
+    public partial class THAMSO
     {
-        public string MAPHIEUPHAT { get; set; }
-        public string MASV { get; set; }
-        public int SOTIENTHU { get; set; }
-    
-        public virtual THETV THETV { get; set; }
+        public int SONAMXUATBAN { get; set; }
+        public short SLSACHMUON { get; set; }
+        public short THOIGIANMUON { get; set; }
+        public int SOTIENPHAT { get; set; }
     }
 }

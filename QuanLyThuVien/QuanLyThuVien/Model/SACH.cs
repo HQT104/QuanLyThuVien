@@ -27,7 +27,7 @@ namespace QuanLyThuVien.Model
         public string NHAXUATBAN { get; set; }
         public System.DateTime NGAYNHAP { get; set; }
         public string THELOAI { get; set; }
-        public decimal TRIGIA { get; set; }
+        public int TRIGIA { get; set; }
         public int SOLUONG { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
