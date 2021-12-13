@@ -17,41 +17,12 @@
         WindowStartupLocation="CenterScreen"
         DataContext="{StaticResource BookVM}"
         Name="detailBookWD"
-        Title="Thông tin sách" Height="560" Width="300">
-
-    <!--<Window.Resources>
-        <ControlTemplate x:Key="TextBox" TargetType="{x:Type TextBox}">
-            <Border Background="{TemplateBinding Background}" 
-            x:Name="Bd" BorderBrush="Black"
-            BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
-                <ScrollViewer x:Name="PART_ContentHost"/>
-            </Border>
-        </ControlTemplate>
-        <ControlTemplate x:Key="ComboboxRadius" TargetType="{x:Type ComboBox}">
-            <Grid>
-                <Border CornerRadius="10"  
-                        BorderThickness="1"  
-                        Background="{TemplateBinding Background}"  
-                        BorderBrush="Black">
-                    <ScrollViewer x:Name="PART_ContentHost"/>
-                </Border>
-            </Grid>
-        </ControlTemplate>
-        <ControlTemplate x:Key="CheckBoxCircle" TargetType="{x:Type CheckBox}">
-            <BulletDecorator Background="Transparent" SnapsToDevicePixels="true">
-                <BulletDecorator.Bullet>
-                    <Border Background="#FFAEB3B9" BorderThickness="2" CornerRadius="10"/>
-                </BulletDecorator.Bullet>
-                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-            </BulletDecorator>
-        </ControlTemplate>
-
-    </Window.Resources>-->
-
+        Title="Thông tin sách" Height="600" Width="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
@@ -73,102 +44,39 @@
             <Image Source="/Images/Sach.jpg" Grid.ColumnSpan="2" />
         </Grid>
         <Grid Grid.Row="2" Margin="16 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Text ="Tên sách" VerticalAlignment="Center" />
-            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
-                <TextBox  x:Name="txbBookName" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
-                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
-                </TextBox>
-            </Border>
+            <TextBox x:Name="txbBookName" materialDesign:HintAssist.Hint="Tên sách" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </Grid>
         <Grid Grid.Row="3" Margin="16 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Text ="Thể loại" VerticalAlignment="Center"/>
-            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
-                <TextBox  x:Name="txbBookCategory" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
-                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
-                </TextBox>
-            </Border>
+            <TextBox x:Name="txbBookID" materialDesign:HintAssist.Hint="Mã sách" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </Grid>
         <Grid Grid.Row="4" Margin="16 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Text ="Tác giả" VerticalAlignment="Center"/>
-            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
-                <TextBox  x:Name="txbBookAuthor" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
-                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
-                </TextBox>
-            </Border>
+            <TextBox  x:Name="txbBookCategory" materialDesign:HintAssist.Hint="Thể loại" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+           
         </Grid>
         <Grid Grid.Row="5" Margin="16 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Text ="Năm xuất bản" VerticalAlignment="Center"/>
-            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
-                <TextBox  x:Name="txbBookPublicationYear" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
-                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
-                </TextBox>
-            </Border>
+            <TextBox x:Name="txbBookAuthor" materialDesign:HintAssist.Hint="Tác giả" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            
         </Grid>
         <Grid Grid.Row="6" Margin="16 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Text ="Nhà xuất bản" VerticalAlignment="Center"/>
-            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
-                <TextBox  x:Name="txbBookPulisher" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
-                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
-                </TextBox>
-            </Border>
+            <TextBox  x:Name="txbBookPublishYear" materialDesign:HintAssist.Hint="Năm xuất bản" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            
         </Grid>
-        <Grid Grid.Row="7" Margin="16 0" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Text ="Ngày nhập" VerticalAlignment="Center"/>
-            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
-                <TextBox  x:Name="txbBookValue" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
-                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
-                </TextBox>
-            </Border>
+        <Grid Grid.Row="7" Margin="16 0">
+            <TextBox  x:Name="txbBookPulisher" materialDesign:HintAssist.Hint="Nhà xuất bản" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+          
         </Grid>
-        <Grid Grid.Row="8" Margin="16 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Text ="Giá trị" VerticalAlignment="Center"/>
-            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
-                <TextBox  x:Name="txbBookImportDate" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
-                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
-                </TextBox>
-            </Border>
+        <Grid Grid.Row="8" Margin="16 0" >
+            <TextBox  x:Name="txbBookImportDate" materialDesign:HintAssist.Hint="Ngày nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            
         </Grid>
         <Grid Grid.Row="9" Margin="16 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="0" Text ="Số lượng" VerticalAlignment="Center" />
-            <Border Grid.Column="1" Background="White" CornerRadius="15" Height="30" BorderBrush="Black" BorderThickness="1">
-                <TextBox  x:Name="txbBookNumber" Background="Transparent" Height="30" Width="179" BorderThickness="0" 
-                                         VerticalContentAlignment="Bottom" HorizontalAlignment="Right" FontSize="14" >
-                </TextBox>
-            </Border>
+            <TextBox x:Name="txbBookValue" materialDesign:HintAssist.Hint="Giá trị" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            
         </Grid>
-        <Grid Grid.Row="10" >
+        <Grid Grid.Row="10" Margin="16 0">
+            <TextBox  x:Name="txbBookNumber" materialDesign:HintAssist.Hint="Số lượng" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </Grid>
+        <Grid Grid.Row="11" >
             <Grid.Resources>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -190,11 +98,11 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0" HorizontalAlignment="Center">
                 <Button Content="Lưu" Foreground="White" FontSize="14"
-                    Command="{Binding EditBoook}" CommandParameter="{Binding ElementName=detailBookWD}"></Button>
+                    Command="{Binding EditBookCommand}" CommandParameter="{Binding ElementName=detailBookWD}"></Button>
             </Grid>
             <Grid Grid.Column="1" HorizontalAlignment="Center">
                 <Button Content="Thoát" Foreground="White" FontSize="14"
-                    Command="{Binding ExitBook}" CommandParameter="{Binding ElementName=detailBookWD}"></Button>
+                    Command="{Binding ExitBookCommand}" CommandParameter="{Binding ElementName=detailBookWD}"></Button>
             </Grid>
         </Grid>
     </Grid>

@@ -26,7 +26,7 @@ namespace QuanLyThuVien.Model
         public string HOTENSV { get; set; }
         public string SODT { get; set; }
         public string EMAIL { get; set; }
-        public Nullable<decimal> TONGNO { get; set; }
+        public int TONGNO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHIEUMUON> PHIEUMUONs { get; set; }

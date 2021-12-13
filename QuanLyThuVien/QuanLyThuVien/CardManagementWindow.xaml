@@ -18,13 +18,13 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-            d:DesignHeight="623" d:DesignWidth="920">
-    <!--<i:Interaction.Triggers>
-        <ei:PropertyChangedTrigger Binding="{Binding Visibility, ElementName=CardCT}">
-            <i:InvokeCommandAction Command="{Binding LoadCommand}" CommandParameter="{Binding ElementName=CardCT}"/>
-        </ei:PropertyChangedTrigger>
-    </i:Interaction.Triggers>-->
+        d:DesignHeight="623" d:DesignWidth="920">
 
+    <i:Interaction.Triggers>
+        <ei:PropertyChangedTrigger Binding="{Binding Visibility, ElementName=CardWD}">
+            <i:InvokeCommandAction Command="{Binding LoadCommand}" CommandParameter="{Binding ElementName=CardWD}"/>
+        </ei:PropertyChangedTrigger>
+    </i:Interaction.Triggers>
     <Grid >
         <Border Background="#FF4699DA" >
             <Grid>
@@ -42,7 +42,7 @@
                         <TextBlock  FontSize="30" FontWeight="Bold" Text="Quản Lý Thẻ" Margin="98,0,-99,0" ></TextBlock>
                     </Grid>
                     <Grid Grid.Column="1" HorizontalAlignment="Right"  Margin="0 10 10 10" >
-                        <Button Height="50" Command="{Binding BackHome}" CommandParameter="{Binding ElementName=CardWD}" Background="#FF4699DA" >
+                        <Button Height="50" Command="{Binding BackHome}" CommandParameter="{Binding ElementName= CardWD}" Background="#FF4699DA" >
                             <Border x:Name="bdHome" Padding="4" CornerRadius="10">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
                                     <TextBlock FontSize="24" Text="Trang chủ" VerticalAlignment="Bottom" />
@@ -91,7 +91,7 @@
                                 </Setter>
                             </Style>
                         </Grid.Resources>
-                        <Button Command="{Binding OpenAddCard}" CommandParameter="{Binding ElementName=CardWD}"
+                        <Button Command="{Binding OpenAddCard}" CommandParameter="{Binding ElementName=cardList}"
                                 Content="Lập thẻ" Foreground="White" FontSize="18" Background="red" FontWeight="Bold"></Button>
                     </Grid>
                     <Grid Grid.Column="1" HorizontalAlignment="Left" Margin="100 0 0 0">
@@ -118,6 +118,7 @@
                                     <materialDesign:PackIcon Kind="TriangleSmallDown" Height="25" Width="25" Foreground="Black" />
                                 </StackPanel>
                             </Border>
+                     
                         </StackPanel>
                     </Grid>
                 </Grid>
@@ -128,7 +129,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
                                 <ColumnDefinition Width="1.5*"></ColumnDefinition>
-                                <ColumnDefinition ></ColumnDefinition>
+                                <ColumnDefinition Width="1.5*"></ColumnDefinition>
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -190,7 +191,7 @@
                                 <ItemsControl x:Name="cardList" Visibility="Hidden">
                                     <i:Interaction.Triggers>
                                         <i:EventTrigger EventName="Loaded">
-                                            <i:InvokeCommandAction Command="{Binding LoadCommand}" CommandParameter="{Binding ElementName=CardCT}" />
+                                            <i:InvokeCommandAction Command="{Binding LoadCommand}" CommandParameter="{Binding ElementName=CardWD}" />
                                         </i:EventTrigger>
                                     </i:Interaction.Triggers>
                                     <ItemsControl.ItemsPanel>

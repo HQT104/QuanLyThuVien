@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\App.xaml
-131882390040
+15282201471
 2-1556844510
-35-1924898513
+38744370589
 22533138030
-AddBookWindow.xaml;AddCardWindow.xaml;BookManagementWindow.xaml;CardManagementWindow.xaml;DetailBookWindow.xaml;DetailCardWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControls\AccountControl.xaml;UserControls\HomeControl.xaml;UserControls\RegulationControl.xaml;UserControls\ReportControl.xaml;
+AddBookWindow.xaml;AddCardWindow.xaml;BookManagementWindow.xaml;CardManagementWindow.xaml;DetailBookWindow.xaml;DetailCardWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControls\AccountControl.xaml;UserControls\BookDetailControl.xaml;UserControls\CardDetailControl.xaml;UserControls\HomeControl.xaml;UserControls\RegulationControl.xaml;UserControls\ReportControl.xaml;
 
 False
 

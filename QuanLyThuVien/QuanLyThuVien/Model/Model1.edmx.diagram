@@ -5,16 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="67ce8c7e12ab4ed882ccaf167276b93f" Name="Diagram1">
-        <EntityTypeShape EntityType="QuanLyThuVienModel.CTPHIEUMUON" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUMUON" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUPHAT" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.SACH" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.TAIKHOAN" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.THETV" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__CTPHIEUMU__MAPHI__2D27B809" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__CTPHIEUMU__MASAC__2E1BDC42" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUMUON__MASV__2A4B4B5E" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUPHAT__MASV__30F848ED" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.CTPHIEUMUON" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUMUON" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.PHIEUPHAT" Width="1.5" PointX="3" PointY="4" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.SACH" Width="1.5" PointX="3" PointY="6.875" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.TAIKHOAN" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.THETV" Width="1.5" PointX="0.75" PointY="2.125" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.THAMSO" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__CTPHIEUMU__MAPHI__2D27B809" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__CTPHIEUMU__MASAC__2E1BDC42" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUMUON__MASV__2A4B4B5E" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__PHIEUPHAT__MASV__30F848ED" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
