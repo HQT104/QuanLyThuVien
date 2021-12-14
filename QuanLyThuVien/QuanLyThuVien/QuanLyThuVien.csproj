@@ -82,6 +82,15 @@
     <Compile Include="CardManagementWindow.xaml.cs">
       <DependentUpon>CardManagementWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Checkfine.xaml.cs">
+      <DependentUpon>Checkfine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.xaml.cs">
+      <DependentUpon>CreateAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InformationBorrow.xaml.cs">
+      <DependentUpon>InformationBorrow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\CTPHIEUMUON.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -162,11 +171,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Checkfine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DetailBookWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DetailCardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InformationBorrow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

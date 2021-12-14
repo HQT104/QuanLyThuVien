@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\Năm 3 - Kì 1\Nhập môn công nghệ phần mềm\Đồ án\QuanLyThuVien\QuanLyThuVien\obj\Debug\
+D:\Năm 3 - Kì 1\Nhập môn công nghệ phần mềm\Đồ án\QuanLyThuVien\QuanLyThuVien\obj\Release\
 QuanLyThuVien
 none
 false
-DEBUG;TRACE
+TRACE
 D:\Năm 3 - Kì 1\Nhập môn công nghệ phần mềm\Đồ án\QuanLyThuVien\QuanLyThuVien\App.xaml
 18-23015609
 2-1556844510
-421046540476
+411888899843
 22837968773
 AddBookWindow.xaml;AddCardWindow.xaml;BookManagementWindow.xaml;CardManagementWindow.xaml;Checkfine.xaml;CreateAccount.xaml;DetailBookWindow.xaml;DetailCardWindow.xaml;InformationBorrow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControls\AccountControl.xaml;UserControls\BookDetailControl.xaml;UserControls\CardDetailControl.xaml;UserControls\HomeControl.xaml;UserControls\RegulationControl.xaml;UserControls\ReportControl.xaml;
 
