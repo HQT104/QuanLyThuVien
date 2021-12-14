@@ -86,7 +86,7 @@ namespace QuanLyThuVien.ViewModel
             edit.txbCardName.Text = s.HOTENSV;
             edit.txbCardEmail.Text = s.EMAIL;
             edit.txbCardSDT.Text = s.SODT.ToString();
-            edit.txbCardDate.Text = s.NGAYLAPTHE.ToString("dd/M/yyyy");
+            edit.txbCardDate.Text = s.NGAYLAPTHE.ToString("M/dd/yyyy");
             edit.txbCardTotalDebt.Text = s.TONGNO.ToString();
             edit.ShowDialog();
 
@@ -125,7 +125,7 @@ namespace QuanLyThuVien.ViewModel
             b.txbName.Text = a.HOTENSV;
             b.txbEmail.Text = a.EMAIL;
             b.txbSDT.Text = a.SODT.ToString();
-            b.txbDate.Text = a.NGAYLAPTHE.ToString("dd/M/yyyy");
+            b.txbDate.Text = a.NGAYLAPTHE.ToString("M/dd/yyyy");
             b.txbTotalDebt.Text = a.TONGNO.ToString();
             p.Items.Add(b);
         }

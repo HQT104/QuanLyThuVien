@@ -85,7 +85,7 @@ namespace QuanLyThuVien.ViewModel
             edit.txbBookAuthor.Text = s.TACGIA;
             edit.txbBookCategory.Text = s.THELOAI;
             edit.txbBookID.Text = s.MASACH;
-            edit.txbBookImportDate.Text = s.NGAYNHAP.ToString("dd/M/yyyy");
+            edit.txbBookImportDate.Text = s.NGAYNHAP.ToString("M/dd/yyyy");
             edit.txbBookValue.Text = s.TRIGIA.ToString();
             edit.txbBookPulisher.Text = s.NHAXUATBAN;
             edit.txbBookPublishYear.Text = s.NAMXUATBAN.ToString();
@@ -113,7 +113,7 @@ namespace QuanLyThuVien.ViewModel
         public void OpenAddBookWD(ItemsControl p)
         {
             AddBookWindow addBookWindow = new AddBookWindow();
-            addBookWindow.txbBookImportDate.Text = DateTime.Now.ToShortDateString();
+            addBookWindow.txbBookImportDate.Text = DateTime.Now.ToLongDateString();
             addBookWindow.ShowDialog();
             if (isAddBookSuccess)
             {
@@ -132,7 +132,7 @@ namespace QuanLyThuVien.ViewModel
             b.txbAuthor.Text = s.TACGIA;
             b.txbCategory.Text = s.THELOAI;
             b.txbName.Text = s.TENSACH;
-            b.txbImportDate.Text = s.NGAYNHAP.ToString("dd/M/yyyy");
+            b.txbImportDate.Text = s.NGAYNHAP.ToString("M/dd//yyyy");
             b.txbValue.Text = s.TRIGIA.ToString();
             b.txbPublisher.Text = s.NHAXUATBAN;
             b.txbPushlishYear.Text = s.NAMXUATBAN.ToString();
@@ -184,7 +184,7 @@ namespace QuanLyThuVien.ViewModel
             book.MASACH = edit.txbBookID.Text;
             book.TENSACH = edit.txbBookName.Text;
             book.THELOAI = edit.txbBookCategory.Text;
-            book.NGAYNHAP = Convert.ToDateTime(edit.txbBookImportDate);
+            string s = edit.txbBookImportDate.Text;
             book.NAMXUATBAN = int.Parse(edit.txbBookPublishYear.Text);
             book.NHAXUATBAN = edit.txbBookPulisher.Text;
             book.TRIGIA = int.Parse(edit.txbBookValue.Text);
