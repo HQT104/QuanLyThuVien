@@ -85,6 +85,9 @@
     <Compile Include="Checkfine.xaml.cs">
       <DependentUpon>Checkfine.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ExtendBook.xaml.cs">
+      <DependentUpon>ExtendBook.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InformationBorrow.xaml.cs">
       <DependentUpon>InformationBorrow.xaml</DependentUpon>
     </Compile>
@@ -177,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DetailCardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExtendBook.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
