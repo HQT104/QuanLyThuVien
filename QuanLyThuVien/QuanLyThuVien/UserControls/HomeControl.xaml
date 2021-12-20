@@ -19,11 +19,6 @@
                 FontFamily="{DynamicResource MaterialDesignFont}"
                 x:Name="HomeCT"
                 Height="454" Width="688">
-    <!--<i:Interaction.Triggers>
-        <ei:PropertyChangedTrigger Binding="{Binding Visibility, ElementName=HomeCT}">
-            <i:InvokeCommandAction Command="{Binding LoadCommand}" CommandParameter="{Binding ElementName=HomeCT}"/>
-        </ei:PropertyChangedTrigger>
-    </i:Interaction.Triggers>-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition ></RowDefinition>

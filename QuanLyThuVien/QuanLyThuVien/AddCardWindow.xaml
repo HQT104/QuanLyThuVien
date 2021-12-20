@@ -19,7 +19,35 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         d:DesignHeight="300" d:DesignWidth="920">
+    <Window.Resources>
+        <ControlTemplate x:Key="TextBox" TargetType="{x:Type TextBox}">
+            <Border Background="{TemplateBinding Background}" 
+            x:Name="Bd" BorderBrush="Black"
+            BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ComboboxRadius" TargetType="{x:Type ComboBox}">
+            <Grid>
+                <Border CornerRadius="10"  
+                        BorderThickness="1"  
+                        Background="{TemplateBinding Background}"  
+                        BorderBrush="Black">
+                    <ScrollViewer x:Name="PART_ContentHost"/>
+                </Border>
+            </Grid>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CheckBoxCircle" TargetType="{x:Type CheckBox}">
+            <BulletDecorator Background="Transparent" SnapsToDevicePixels="true">
+                <BulletDecorator.Bullet>
+                    <Border Background="#FFAEB3B9" BorderThickness="2" CornerRadius="10"/>
 
+                </BulletDecorator.Bullet>
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </BulletDecorator>
+        </ControlTemplate>
+
+    </Window.Resources>
     <Grid Background="#FF4699DA" >
         <Border>
             <Grid>

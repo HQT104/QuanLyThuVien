@@ -13,6 +13,7 @@ using System.ComponentModel;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Security.Cryptography;
+using System.Globalization;
 
 namespace QuanLyThuVien.ViewModel
 {
@@ -69,7 +70,7 @@ namespace QuanLyThuVien.ViewModel
 
         public void OpenEditCardWD(CardDetailControl cardDetail)
         {
-            id_selected =cardDetail.txbID.Text;
+            id_selected = cardDetail.txbID.Text;
             //MessageBox.Show(id_selected.ToString());
             int n = CardList.Count;
             THETV s = new THETV();
@@ -86,7 +87,7 @@ namespace QuanLyThuVien.ViewModel
             edit.txbCardName.Text = s.HOTENSV;
             edit.txbCardEmail.Text = s.EMAIL;
             edit.txbCardSDT.Text = s.SODT.ToString();
-            edit.txbCardDate.Text = s.NGAYLAPTHE.ToString("dd/M/yyyy");
+            edit.txbCardDate.Text = s.NGAYLAPTHE.ToString("M/dd/yyyy");
             edit.txbCardTotalDebt.Text = s.TONGNO.ToString();
             edit.ShowDialog();
 
@@ -106,7 +107,7 @@ namespace QuanLyThuVien.ViewModel
         public void OpenAddCardWD(ItemsControl p)
         {
             AddCardWindow addCardWindow = new AddCardWindow();
-            addCardWindow.txbCardDate.Text = DateTime.Now.ToShortDateString(); 
+            addCardWindow.txbCardDate.Text = DateTime.Now.ToShortDateString();
             addCardWindow.ShowDialog();
             if (isAddCardSuccess)
             {
@@ -125,7 +126,7 @@ namespace QuanLyThuVien.ViewModel
             b.txbName.Text = a.HOTENSV;
             b.txbEmail.Text = a.EMAIL;
             b.txbSDT.Text = a.SODT.ToString();
-            b.txbDate.Text = a.NGAYLAPTHE.ToString("dd/M/yyyy");
+            b.txbDate.Text = a.NGAYLAPTHE.ToString("M/dd/yyyy");
             b.txbTotalDebt.Text = a.TONGNO.ToString();
             p.Items.Add(b);
         }
@@ -154,7 +155,7 @@ namespace QuanLyThuVien.ViewModel
                 settingDispatcher.BeginInvoke(update, i, p.cardList);
             }
             e.Result = p;
-          
+
         }
         public delegate void UpdateUi(THETV a, ItemsControl p);
         public bool IsDigitsOnly(string str)
@@ -187,13 +188,39 @@ namespace QuanLyThuVien.ViewModel
         }
         public bool IsCardValid(AddCardWindow card)
         {
+            // Kiểm tra trường hợp nhập thiếu
+            if (String.IsNullOrEmpty(card.txbCardEmail.Text) || String.IsNullOrEmpty(card.txbCardName.Text)
+                || String.IsNullOrEmpty(card.txbCardSDT.Text))
+            {
+                MessageBox.Show("Vui lòng nhập thông tin đầy đủ");
+                return false;
+            }
+
+            if (!IsDigitsOnly(card.txbCardSDT.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số lượng sách là số nguyên");
+                return false;
+            }
             return true;
-            
+
         }
 
         // Kiểm tra cho trường hợp edit
         public bool IsCardValid(DetailCardWindow card)
         {
+            // Kiểm tra trường hợp nhập thiếu
+            if (String.IsNullOrEmpty(card.txbCardEmail.Text) || String.IsNullOrEmpty(card.txbCardName.Text)
+                || String.IsNullOrEmpty(card.txbCardSDT.Text))
+            {
+                MessageBox.Show("Vui lòng nhập thông tin đầy đủ");
+                return false;
+            }
+
+            if (!IsDigitsOnly(card.txbCardSDT.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số lượng sách là số nguyên");
+                return false;
+            }
             return true;
         }
         public void DeleteCard(CardDetailControl cardDetail)
@@ -206,7 +233,7 @@ namespace QuanLyThuVien.ViewModel
                 foreach (THETV card in CardList)
                 {
                     if (card.MASV == id)
-                    {                        
+                    {
                         DataProvider.Ins.DB.THETVs.Remove(card);
                         DataProvider.Ins.DB.SaveChanges();
                         CardList.Clear();
@@ -233,7 +260,7 @@ namespace QuanLyThuVien.ViewModel
                 SODT = add.txbCardSDT.Text,
                 NGAYLAPTHE = Convert.ToDateTime(add.txbCardDate.Text),
                 TONGNO = 0,
-            };    
+            };
             DataProvider.Ins.DB.THETVs.Add(card);
             DataProvider.Ins.DB.SaveChanges();
             CardList.Clear();
@@ -241,6 +268,7 @@ namespace QuanLyThuVien.ViewModel
 
             isAddCardSuccess = true;
             MessageBox.Show("Thêm thẻ thành công!!!");
+
         }
 
         // Search thẻ theo họ tên

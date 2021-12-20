@@ -183,11 +183,10 @@
                         </Grid>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="326*"/>
-                                <ColumnDefinition Width="346*"/>
-                                <ColumnDefinition Width="209*"/>
+                                <ColumnDefinition Width="163*"/>
+                                <ColumnDefinition Width="277*"/>
                             </Grid.ColumnDefinitions>
-                            <ScrollViewer Height="450" Background="White" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="3">
+                            <ScrollViewer Height="450" Background="White" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="2">
                                 <ItemsControl x:Name="cardList" Visibility="Hidden">
                                     <i:Interaction.Triggers>
                                         <i:EventTrigger EventName="Loaded">
@@ -204,8 +203,9 @@
                             <ProgressBar
                                 Name="progressBar" Width="80" Height="80"
                                 Style="{StaticResource MaterialDesignCircularProgressBar}"
-                                Value="20" IsIndeterminate="True" Grid.Column="1" Margin="74,185,191.5,185"/>
+                                Value="20" IsIndeterminate="True" Grid.Column="1" Margin="74.394,185,400,185"/>
                         </Grid>
+                        
                     </StackPanel>
                 </Grid>
             </Grid>

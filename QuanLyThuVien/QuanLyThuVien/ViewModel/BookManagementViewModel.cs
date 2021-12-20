@@ -85,7 +85,7 @@ namespace QuanLyThuVien.ViewModel
             edit.txbBookAuthor.Text = s.TACGIA;
             edit.txbBookCategory.Text = s.THELOAI;
             edit.txbBookID.Text = s.MASACH;
-            edit.txbBookImportDate.Text = s.NGAYNHAP.ToString("dd/M/yyyy");
+            edit.txbBookImportDate.Text = s.NGAYNHAP.ToString("M/dd/yyyy");
             edit.txbBookValue.Text = s.TRIGIA.ToString();
             edit.txbBookPulisher.Text = s.NHAXUATBAN;
             edit.txbBookPublishYear.Text = s.NAMXUATBAN.ToString();
@@ -105,7 +105,7 @@ namespace QuanLyThuVien.ViewModel
                 bookDetail.txbPublisher.Text = edit.txbBookPulisher.Text;
                 bookDetail.txbPushlishYear.Text = edit.txbBookPublishYear.Text;
                 bookDetail.txbNumberOfBook.Text = edit.txbBookNumber.Text;
-                bookDetail.txbName.Text = edit.txbBookName.Text; 
+                bookDetail.txbName.Text = edit.txbBookName.Text;
                 isUpdateBookSuccess = false;
             }
 
@@ -114,6 +114,7 @@ namespace QuanLyThuVien.ViewModel
         {
             AddBookWindow addBookWindow = new AddBookWindow();
             addBookWindow.txbBookImportDate.Text = DateTime.Now.ToShortDateString();
+            
             addBookWindow.ShowDialog();
             if (isAddBookSuccess)
             {
@@ -132,11 +133,11 @@ namespace QuanLyThuVien.ViewModel
             b.txbAuthor.Text = s.TACGIA;
             b.txbCategory.Text = s.THELOAI;
             b.txbName.Text = s.TENSACH;
-            b.txbImportDate.Text = s.NGAYNHAP.ToString("dd/M/yyyy");
+            b.txbImportDate.Text = s.NGAYNHAP.ToString("M/dd//yyyy");
             b.txbValue.Text = s.TRIGIA.ToString();
             b.txbPublisher.Text = s.NHAXUATBAN;
             b.txbPushlishYear.Text = s.NAMXUATBAN.ToString();
-            b.txbNumberOfBook.Text = s.SOLUONG.ToString();          
+            b.txbNumberOfBook.Text = s.SOLUONG.ToString();
             p.Items.Add(b);
         }
 
@@ -184,7 +185,7 @@ namespace QuanLyThuVien.ViewModel
             book.MASACH = edit.txbBookID.Text;
             book.TENSACH = edit.txbBookName.Text;
             book.THELOAI = edit.txbBookCategory.Text;
-            book.NGAYNHAP = Convert.ToDateTime(edit.txbBookImportDate);
+            string s = edit.txbBookImportDate.Text;
             book.NAMXUATBAN = int.Parse(edit.txbBookPublishYear.Text);
             book.NHAXUATBAN = edit.txbBookPulisher.Text;
             book.TRIGIA = int.Parse(edit.txbBookValue.Text);
@@ -198,7 +199,7 @@ namespace QuanLyThuVien.ViewModel
             BookList = new ObservableCollection<SACH>(DataProvider.Ins.DB.SACHes);
             MessageBox.Show("Cập nhật thành công");
         }
-     
+
         public void DeleteBook(BookDetailControl bookDetail)
         {
             string s = "Bạn muốn xóa sách có mã sách " + bookDetail.txbID.Text + " không?";
@@ -289,7 +290,16 @@ namespace QuanLyThuVien.ViewModel
                 MessageBox.Show("Vui lòng nhập giá trị sách là số nguyên");
                 return false;
             }
-
+            int n = BookList.Count;
+            SACH s = new SACH();
+            for (int i = 0; i < n; i++)
+            {
+                if (BookList[i].MASACH == book.txbBookID.Text)
+                {
+                    MessageBox.Show("Mã sách đã tồn tại");
+                    return false;
+                }
+            }
             return true;
 
         }
@@ -320,6 +330,16 @@ namespace QuanLyThuVien.ViewModel
             {
                 MessageBox.Show("Vui lòng nhập giá trị sách là số nguyên");
                 return false;
+            }
+            int n = BookList.Count;
+            SACH s = new SACH();
+            for (int i = 0; i < n; i++)
+            {
+                if (BookList[i].MASACH == book.txbBookID.Text)
+                {
+                    MessageBox.Show("Mã sách đã tồn tại");
+                    return false;
+                }
             }
             return true;
         }
