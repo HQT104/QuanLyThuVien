@@ -19,11 +19,13 @@ namespace QuanLyThuVien.ViewModel
 
         public ICommand AddBook { get; set; }
         public ICommand AddCard { get; set; }
+        public ICommand Fine { get; set; }
 
         public HomeViewModel()
         {
             AddBook = new RelayCommand<HomeControl>((p) => { return true; }, (p) => { BookManagementWindow bookManagementWindow = new BookManagementWindow(); bookManagementWindow.ShowDialog(); });
             AddCard = new RelayCommand<HomeControl>((p) => { return true; }, (p) => { CardManagementWindow cardManagementWindow = new CardManagementWindow(); cardManagementWindow.ShowDialog(); });
+            Fine = new RelayCommand<HomeControl>((p) => { return true; }, (p) => { Checkfine checkfine = new Checkfine(); checkfine.ShowDialog(); });
 
         }
     }

@@ -133,7 +133,7 @@ namespace QuanLyThuVien.ViewModel
             b.txbAuthor.Text = s.TACGIA;
             b.txbCategory.Text = s.THELOAI;
             b.txbName.Text = s.TENSACH;
-            b.txbImportDate.Text = s.NGAYNHAP.ToString("M/dd//yyyy");
+            b.txbImportDate.Text = s.NGAYNHAP.ToString("M/dd/yyyy");
             b.txbValue.Text = s.TRIGIA.ToString();
             b.txbPublisher.Text = s.NHAXUATBAN;
             b.txbPushlishYear.Text = s.NAMXUATBAN.ToString();

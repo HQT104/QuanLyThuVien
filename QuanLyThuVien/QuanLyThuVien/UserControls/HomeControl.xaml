@@ -120,7 +120,7 @@
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1">
                             <Button Height="120" Width="80" x:Name="btnPhieuThuTienPhat" Background="#FF40BDC7" VerticalAlignment="Top"
-                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
+                                    Command="{Binding Fine}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <StackPanel VerticalAlignment="Stretch" >
                                     <Image Source="/Images/PhieuThuTienPhat.png" Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
                                     <TextBlock Text="Phiếu thu tiền phạt" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0 5"></TextBlock>
