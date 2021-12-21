@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\QuanLyThuVien",
-    "\\QuanLyThuVien\\QuanLyThuVien"
+    "\\QuanLyThuVien\\QuanLyThuVien",
+    "\\QuanLyThuVien\\QuanLyThuVien\\UserControls"
   ],
-  "SelectedNode": "\\QuanLyThuVien\\QuanLyThuVien\\Checkfine.xaml",
+  "SelectedNode": "\\QuanLyThuVien\\QuanLyThuVien\\UserControls\\HomeControl.xaml",
   "PreviewInSolutionExplorer": false
 }
