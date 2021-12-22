@@ -90,7 +90,7 @@ namespace QuanLyThuVien.ViewModel
             edit.txbCardTotalDebt.Text = s.TONGNO.ToString();
             edit.ShowDialog();
 
-            // Update screen after updated staff
+            // Update screen after updated card
             if (isUpdateCardSuccess)
             {
                 cardDetail.txbID.Text = edit.txbCardMaSV.Text;

@@ -187,3 +187,9 @@ D:\Năm 3 - Kì 1\Nhập môn công nghệ phần mềm\Đồ án\QuanLyThuVien\
 D:\Năm 3 - Kì 1\Nhập môn công nghệ phần mềm\Đồ án\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
 D:\Năm 3 - Kì 1\Nhập môn công nghệ phần mềm\Đồ án\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 D:\Năm 3 - Kì 1\Nhập môn công nghệ phần mềm\Đồ án\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\Checkfine.g.cs
+C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\ExtendBook.g.cs
+C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\InformationBorrow.g.cs
+C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\Checkfine.baml
+C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\ExtendBook.baml
+C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\InformationBorrow.baml

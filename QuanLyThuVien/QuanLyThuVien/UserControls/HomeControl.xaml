@@ -19,11 +19,6 @@
                 FontFamily="{DynamicResource MaterialDesignFont}"
                 x:Name="HomeCT"
                 Height="454" Width="688">
-    <!--<i:Interaction.Triggers>
-        <ei:PropertyChangedTrigger Binding="{Binding Visibility, ElementName=HomeCT}">
-            <i:InvokeCommandAction Command="{Binding LoadCommand}" CommandParameter="{Binding ElementName=HomeCT}"/>
-        </ei:PropertyChangedTrigger>
-    </i:Interaction.Triggers>-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition ></RowDefinition>
@@ -123,7 +118,7 @@
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Text="Khác" FontSize="16" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Width="240" />
 
-                        <StackPadnel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1">
                             <Button Height="120" Width="80" x:Name="btnPhieuThuTienPhat" Background="#FF40BDC7" VerticalAlignment="Top"
                                     Command="{Binding Fine}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <StackPanel VerticalAlignment="Stretch" >
@@ -142,11 +137,8 @@
                                     </StackPanel>
                                 </Border>
                             </Button>
-
-
-                        </StackPadnel>
+                        </StackPanel>
                     </Grid>
-
                 </Button>
             </Grid>
         </Grid>
