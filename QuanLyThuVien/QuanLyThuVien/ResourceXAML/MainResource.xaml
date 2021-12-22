@@ -9,5 +9,6 @@
     <viewmodel:ReportViewModel x:Key="ReportVM"></viewmodel:ReportViewModel>
     <viewmodel:BookManagementViewModel x:Key="BookVM"></viewmodel:BookManagementViewModel>
     <viewmodel:CardManagementViewModel x:Key="CardVM"></viewmodel:CardManagementViewModel>
+    <viewmodel:CheckfineViewModel x:Key="FineVM"></viewmodel:CheckfineViewModel>
 
 </ResourceDictionary>

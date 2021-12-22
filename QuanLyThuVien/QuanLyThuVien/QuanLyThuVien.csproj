@@ -150,6 +150,7 @@
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\BookManagementViewModel.cs" />
     <Compile Include="ViewModel\CardManagementViewModel.cs" />
+    <Compile Include="ViewModel\CheckfineViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />

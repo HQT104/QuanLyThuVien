@@ -10,7 +10,7 @@
         WindowStartupLocation="CenterScreen"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:viewmodel="clr-namespace:QuanLyThuVien.ViewModel" 
-        DataContext="{StaticResource MainVM}"
+        DataContext="{StaticResource FineVM}"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -18,7 +18,7 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        x:Name="wdMain"
+        x:Name="FineWD"
         Title="Quản lý Thư Viện" Height="520" Width="450">
 
     <Grid>
@@ -39,12 +39,12 @@
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="18" FontWeight="Bold" VerticalAlignment="center" HorizontalAlignment="center">Mã SV:</TextBlock>
             <Border Grid.Column="1" Margin="0 5 0 5" HorizontalAlignment="Center" Background="White" CornerRadius="25" Height="40" Width="200"  BorderBrush="Black" BorderThickness="2">
-                <TextBox Background="Transparent" Height="35" Width="160" BorderThickness="0" 
+                <TextBox x:Name="fSearch" Background="Transparent" Height="35" Width="160" BorderThickness="0" 
                      Margin="20 0 0 0" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="14" >
                 </TextBox>
             </Border>
         </Grid>
-        <Button Grid.Row="2" Width="130" Command="{Binding OpenAddBook}" CommandParameter="{Binding ElementName=BookWD}"
+        <Button Grid.Row="2" Width="130" Command="{Binding Check}" CommandParameter="{Binding ElementName=FineList}"
                                 Content="Kiểm tra" Foreground="White" FontSize="18" Background="red" FontWeight="Bold">
         </Button>
         <Grid Grid.Row="3">
@@ -54,7 +54,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="18" FontWeight="Bold" VerticalAlignment="center" HorizontalAlignment="center">Tổng nợ:</TextBlock>
             <Border Grid.Column="1" Margin="0 5 0 5" HorizontalAlignment="Center" Background="White" CornerRadius="25" Height="40" Width="200"  BorderBrush="Black" BorderThickness="2">
-                <TextBox Background="Transparent" Height="35" Width="160" BorderThickness="0" 
+                <TextBox x:Name="SumDebt" Background="Transparent" Height="35" Width="160" BorderThickness="0" 
                      Margin="20 0 0 0" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="14" >
                 </TextBox>
             </Border>
@@ -66,7 +66,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="18" FontWeight="Bold" VerticalAlignment="center" HorizontalAlignment="center">Số tiền thu:</TextBlock>
             <Border Grid.Column="1" Margin="0 5 0 5" HorizontalAlignment="Center" Background="White" CornerRadius="25" Height="40" Width="200"  BorderBrush="Black" BorderThickness="2">
-                <TextBox Background="Transparent" Height="35" Width="160" BorderThickness="0" 
+                <TextBox x:Name="MoneyRc" Background="Transparent" Height="35" Width="160" BorderThickness="0" 
                      Margin="20 0 0 0" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="14" >
                 </TextBox>
             </Border>
@@ -88,10 +88,10 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Width="130" Command="{Binding OpenAddBook}" CommandParameter="{Binding ElementName=BookWD}"
+            <Button Grid.Column="0" Width="130" Command="{Binding Payment}" CommandParameter="{Binding ElementName=FineWD}"
                                 Content="Thanh toán" Foreground="White" FontSize="18" Background="red" FontWeight="Bold">
             </Button>
-            <Button Grid.Column="1" Width="130" Command="{Binding OpenAddBook}" CommandParameter="{Binding ElementName=BookWD}"
+            <Button Grid.Column="1" Width="130" Command="{Binding Back}" CommandParameter="{Binding ElementName=FineWD}"
                                 Content="Thoát" Foreground="White" FontSize="18" Background="red" FontWeight="Bold">
             </Button>
         </Grid>
