@@ -12,6 +12,10 @@
 using MaterialDesignThemes.Wpf;
 using MaterialDesignThemes.Wpf.Converters;
 using MaterialDesignThemes.Wpf.Transitions;
+using Microsoft.Expression.Interactivity.Core;
+using Microsoft.Expression.Interactivity.Input;
+using Microsoft.Expression.Interactivity.Layout;
+using Microsoft.Expression.Interactivity.Media;
 using QuanLyThuVien.UserControls;
 using QuanLyThuVien.ViewModel;
 using System;

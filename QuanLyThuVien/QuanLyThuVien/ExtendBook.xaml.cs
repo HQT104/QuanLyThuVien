@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace QuanLyThuVien
 {
     /// <summary>
-    /// Interaction logic for CreateAccount.xaml
+    /// Interaction logic for ExtendBook.xaml
     /// </summary>
-    public partial class CreateAccount : Window
+    public partial class ExtendBook : Window
     {
-        public CreateAccount()
+        public ExtendBook()
         {
             InitializeComponent();
         }

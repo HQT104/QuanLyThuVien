@@ -26,7 +26,10 @@ namespace QuanLyThuVien.ViewModel
             AddBook = new RelayCommand<HomeControl>((p) => { return true; }, (p) => { BookManagementWindow bookManagementWindow = new BookManagementWindow(); bookManagementWindow.ShowDialog(); });
             AddCard = new RelayCommand<HomeControl>((p) => { return true; }, (p) => { CardManagementWindow cardManagementWindow = new CardManagementWindow(); cardManagementWindow.ShowDialog(); });
             Fine = new RelayCommand<HomeControl>((p) => { return true; }, (p) => { Checkfine checkfine = new Checkfine(); checkfine.ShowDialog(); });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7876ebffd7aed11b5ff425ea451aaa3ff39060a7
         }
     }
 }
