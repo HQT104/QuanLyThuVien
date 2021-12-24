@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\
 QuanLyThuVien
 none
 false
 DEBUG;TRACE
-C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\App.xaml
-18-1612614233
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\App.xaml
+18-465455600
 2-1556844510
-43-1279839755
-22533138030
-AddBookWindow.xaml;AddCardWindow.xaml;BookManagementWindow.xaml;CardManagementWindow.xaml;Checkfine.xaml;DetailBookWindow.xaml;DetailCardWindow.xaml;ExtendBook.xaml;InformationBorrow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControls\AccountControl.xaml;UserControls\BookDetailControl.xaml;UserControls\CardDetailControl.xaml;UserControls\HomeControl.xaml;UserControls\RegulationControl.xaml;UserControls\ReportControl.xaml;
+441448952364
+221651522095
+AddBookWindow.xaml;AddCardWindow.xaml;BookManagementWindow.xaml;CardManagementWindow.xaml;Checkfine.xaml;DetailBookWindow.xaml;DetailCardWindow.xaml;ExtendBook.xaml;InformationBorrowWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControls\AccountControl.xaml;UserControls\BookDetailControl.xaml;UserControls\CardDetailControl.xaml;UserControls\HomeControl.xaml;UserControls\RegulationControl.xaml;UserControls\ReportControl.xaml;
 
 True
 

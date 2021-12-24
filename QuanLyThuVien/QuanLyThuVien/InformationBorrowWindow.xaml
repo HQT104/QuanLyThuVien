@@ -1,0 +1,176 @@
+﻿<Window x:Class="QuanLyThuVien.InformationBorrowWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:local="clr-namespace:QuanLyThuVien"
+        xmlns:uc="clr-namespace:QuanLyThuVien.UserControls"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:viewmodel="clr-namespace:QuanLyThuVien.ViewModel" 
+        DataContext="{StaticResource IbVM}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        x:Name="IBWD"
+        Title="Quản lý Thư Viện" Height="504" Width="828">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="50*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="650"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" FontWeight="Bold" VerticalAlignment="Center" Margin="300,20,0,0" FontSize="35">Thông tin mượn</TextBlock>
+            <Grid Grid.Column="1" HorizontalAlignment="Right"  Margin="0 10 10 10" >
+                <Button Height="50" Command="{Binding Backib}" CommandParameter="{Binding ElementName=IBWD}" Background="#FF4699DA" >
+                    <Border x:Name="bdHome" Padding="4" CornerRadius="10">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                            <TextBlock FontSize="18" Text="Trang chủ" VerticalAlignment="Bottom" />
+                            <Image Source="/Images/TrangChu.jpg" Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                    </Border>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Background="White" CornerRadius="25" Height="40" Width="300" BorderBrush="Black" BorderThickness="1">
+                <TextBox Background="Transparent" Height="35" Width="200" BorderThickness="0" materialDesign:HintAssist.Hint="Nhập mã thẻ"
+                         Margin="20 0 0 0" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="20" >
+                </TextBox>
+            </Border>
+            <Button Grid.Column="1" Width="130" Command="{Binding Findmt}" CommandParameter="{Binding ElementName=IBWD}"
+                                Content="Tìm" Foreground="White" FontSize="18" Background="red" FontWeight="Bold">
+            </Button>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="right">Mã SV:</TextBlock>
+            <TextBlock Grid.Column="2" FontWeight="Bold" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="center">Họ và tên:</TextBlock>
+            <Border Grid.Column="1" Background="White" CornerRadius="25" Height="40" Width="180"  BorderBrush="Black" BorderThickness="1">
+                <TextBox Background="Transparent" Height="35" Width="160" BorderThickness="0" 
+                     Margin="20 0 0 0" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="14" >
+                </TextBox>
+            </Border>
+            <Border Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" Background="White" CornerRadius="25" Height="40" Width="180"  BorderBrush="Black" BorderThickness="1">
+                <TextBox Background="Transparent" Height="35" Width="160" BorderThickness="0" 
+                     Margin="20 0 0 0" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="14" >
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="3">
+            <StackPanel Margin="100 5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="1.2*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" Value="#FFA9C0E2"></Setter>
+                            <Setter Property="BorderThickness" Value="1"></Setter>
+                            <Setter Property="BorderBrush" Value="White"></Setter>
+                        </Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Margin" Value="0 2"></Setter>
+                            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                            <Setter Property="Foreground" Value="Black"></Setter>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid Grid.Column="1">
+                        <Border>
+                            <TextBlock Text="Mã sách"></TextBlock>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="0">
+                        <Border>
+                            <TextBlock Text="STT"></TextBlock>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Border>
+                            <TextBlock Text="Tên sách"></TextBlock>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="3">
+                        <Border>
+                            <TextBlock Text="Tác giả"></TextBlock>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="4">
+                        <Border>
+                            <TextBlock Text="Ngày mượn"></TextBlock>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="5">
+                        <Border>
+                            <TextBlock Text="Hạn mượn"></TextBlock>
+                        </Border>
+                    </Grid>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="326*"/>
+                        <ColumnDefinition Width="346*"/>
+                        <ColumnDefinition Width="209*"/>
+                    </Grid.ColumnDefinitions>
+                    <ScrollViewer Height="450" Background="White" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="3">
+                        <ItemsControl x:Name ="IbList" Visibility="Hidden">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Loaded">
+                                    <i:InvokeCommandAction Command="{Binding LoadIb}" CommandParameter="{Binding ElementName=IBWD}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </ScrollViewer>
+                    <ProgressBar
+                                Name="progressBar" Width="80" Height="80"
+                                Style="{StaticResource MaterialDesignCircularProgressBar}"
+                                Value="20" IsIndeterminate="True" Grid.Column="1" Margin="74,185,191.5,185"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Width="130" Command="{Binding BookBack}" CommandParameter="{Binding ElementName=IBWD}"
+                                Content="Trả sách" Foreground="White" FontSize="18" Background="red" FontWeight="Bold">
+            </Button>
+            <Button Grid.Column="1" Width="130" Command="{Binding extenddBook}" CommandParameter="{Binding ElementName=IBWD}"
+                                Content="Gia hạn" Foreground="White" FontSize="18" Background="red" FontWeight="Bold">
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

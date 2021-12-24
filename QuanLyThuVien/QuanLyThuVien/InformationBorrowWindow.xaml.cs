@@ -17,9 +17,9 @@ namespace QuanLyThuVien
     /// <summary>
     /// Interaction logic for InformationBorrow.xaml
     /// </summary>
-    public partial class InformationBorrow : Window
+    public partial class InformationBorrowWindow : Window
     {
-        public InformationBorrow()
+        public InformationBorrowWindow()
         {
             InitializeComponent();
         }

@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Release\
 QuanLyThuVien
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\App.xaml
 18-465455600
 2-1556844510
@@ -16,5 +16,5 @@ C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\App.xaml
 221651522095
 AddBookWindow.xaml;AddCardWindow.xaml;BookManagementWindow.xaml;CardManagementWindow.xaml;Checkfine.xaml;DetailBookWindow.xaml;DetailCardWindow.xaml;ExtendBook.xaml;InformationBorrowWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControls\AccountControl.xaml;UserControls\BookDetailControl.xaml;UserControls\CardDetailControl.xaml;UserControls\HomeControl.xaml;UserControls\RegulationControl.xaml;UserControls\ReportControl.xaml;
 
-False
+True
 

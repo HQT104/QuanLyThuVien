@@ -10,5 +10,5 @@
     <viewmodel:BookManagementViewModel x:Key="BookVM"></viewmodel:BookManagementViewModel>
     <viewmodel:CardManagementViewModel x:Key="CardVM"></viewmodel:CardManagementViewModel>
     <viewmodel:CheckfineViewModel x:Key="FineVM"></viewmodel:CheckfineViewModel>
-
+    <viewmodel:InformationBorrowViewModel x:Key="IbVM"></viewmodel:InformationBorrowViewModel>
 </ResourceDictionary>

@@ -88,8 +88,8 @@
     <Compile Include="ExtendBook.xaml.cs">
       <DependentUpon>ExtendBook.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InformationBorrow.xaml.cs">
-      <DependentUpon>InformationBorrow.xaml</DependentUpon>
+    <Compile Include="InformationBorrowWindow.xaml.cs">
+      <DependentUpon>InformationBorrowWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\CTPHIEUMUON.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -152,6 +152,7 @@
     <Compile Include="ViewModel\CardManagementViewModel.cs" />
     <Compile Include="ViewModel\CheckfineViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
+    <Compile Include="ViewModel\InformationBorrowViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\RegulationViewModel.cs" />
@@ -188,7 +189,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="InformationBorrow.xaml">
+    <Page Include="InformationBorrowWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
