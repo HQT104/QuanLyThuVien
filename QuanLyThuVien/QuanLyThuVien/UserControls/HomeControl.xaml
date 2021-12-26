@@ -87,7 +87,7 @@
                                 </Border>
                             </Button>
                             <Button Height="120" Width="72" x:Name="btnThongTinChoMuon" Background="#FF40BDC7" VerticalAlignment="Top"
-                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
+                                    Command="{Binding InforBorrow}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <StackPanel VerticalAlignment="Stretch" >
                                     <Image Source="/Images/ThongTinMuonSach.png"  Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"  />
                                     <TextBlock Text="Thông tin cho mượn" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0 5"></TextBlock>

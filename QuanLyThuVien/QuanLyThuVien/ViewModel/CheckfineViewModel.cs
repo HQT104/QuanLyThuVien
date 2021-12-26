@@ -36,14 +36,14 @@ namespace QuanLyThuVien.ViewModel
 
         public void SearchFine(Checkfine fine)
         {
-            MaSV_selected = fine.fSearch.Text.ToLower();
+            MaSV_selected = fine.fSearch.Text.ToLower().Trim();
             fine.SumDebt.Clear();
             fine.Result.Clear();
             FineList = new ObservableCollection<PHIEUPHAT>(DataProvider.Ins.DB.PHIEUPHATs);
             int dem = 0;
             foreach (PHIEUPHAT i in FineList)
             {
-                string b = i.MASV.ToLower();
+                string b = i.MASV.ToLower().Trim();
                 if (b == MaSV_selected)
                 {
                     fine.SumDebt.Text = i.SOTIENTHU.ToString();

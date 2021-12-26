@@ -3,8 +3,9 @@
     "",
     "\\QuanLyThuVien",
     "\\QuanLyThuVien\\QuanLyThuVien",
-    "\\QuanLyThuVien\\QuanLyThuVien\\UserControls"
+    "\\QuanLyThuVien\\QuanLyThuVien\\UserControls",
+    "\\QuanLyThuVien\\QuanLyThuVien\\ViewModel"
   ],
-  "SelectedNode": "\\QuanLyThuVien\\QuanLyThuVien\\UserControls\\HomeControl.xaml",
+  "SelectedNode": "\\QuanLyThuVien\\QuanLyThuVien\\InformationBorrowWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

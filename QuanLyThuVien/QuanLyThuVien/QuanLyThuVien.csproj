@@ -134,6 +134,9 @@
     <Compile Include="UserControls\BookDetailControl.xaml.cs">
       <DependentUpon>BookDetailControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\BorrowDetailControl.xaml.cs">
+      <DependentUpon>BorrowDetailControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CardDetailControl.xaml.cs">
       <DependentUpon>CardDetailControl.xaml</DependentUpon>
     </Compile>
@@ -236,6 +239,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\BookDetailControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BorrowDetailControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

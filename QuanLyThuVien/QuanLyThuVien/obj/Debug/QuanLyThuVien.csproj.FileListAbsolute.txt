@@ -193,12 +193,13 @@ C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\De
 C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\Checkfine.baml
 C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\ExtendBook.baml
 C:\Users\19520\OneDrive\Desktop\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\InformationBorrow.baml
-C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
-C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\MaterialDesignColors.dll
-C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\MaterialDesignThemes.Wpf.dll
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\EntityFramework.dll
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\MaterialDesignColors.dll
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\MaterialDesignThemes.Wpf.dll
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\Microsoft.Expression.Interactions.dll
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\EntityFramework.xml
@@ -208,6 +209,7 @@ C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\Microsoft.Expression.Interactions.xml
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.AssemblyReference.cache
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\AddBookWindow.g.cs
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\AddCardWindow.g.cs
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\BookManagementWindow.g.cs
@@ -221,6 +223,7 @@ C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\MainWindow.g.cs
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\AccountControl.g.cs
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\BookDetailControl.g.cs
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\BorrowDetailControl.g.cs
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\CardDetailControl.g.cs
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\HomeControl.g.cs
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\RegulationControl.g.cs
@@ -245,6 +248,7 @@ C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\ResourceXAML\MainResource.baml
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\AccountControl.baml
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\BookDetailControl.baml
+C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\BorrowDetailControl.baml
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\CardDetailControl.baml
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\HomeControl.baml
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\UserControls\RegulationControl.baml
@@ -256,4 +260,3 @@ C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
-C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb

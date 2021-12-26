@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\ADMIN\Source\Repos\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\App.xaml
-18-465455600
+19464125672
 2-1556844510
-43-2003655565
+441338777279
 221651522095
-AddBookWindow.xaml;AddCardWindow.xaml;BookManagementWindow.xaml;CardManagementWindow.xaml;Checkfine.xaml;DetailBookWindow.xaml;DetailCardWindow.xaml;ExtendBook.xaml;InformationBorrowWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControls\AccountControl.xaml;UserControls\BookDetailControl.xaml;UserControls\CardDetailControl.xaml;UserControls\HomeControl.xaml;UserControls\RegulationControl.xaml;UserControls\ReportControl.xaml;
+AddBookWindow.xaml;AddCardWindow.xaml;BookManagementWindow.xaml;CardManagementWindow.xaml;Checkfine.xaml;DetailBookWindow.xaml;DetailCardWindow.xaml;ExtendBook.xaml;InformationBorrowWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControls\AccountControl.xaml;UserControls\BookDetailControl.xaml;UserControls\BorrowDetailControl.xaml;UserControls\CardDetailControl.xaml;UserControls\HomeControl.xaml;UserControls\RegulationControl.xaml;UserControls\ReportControl.xaml;
 
 True
 
