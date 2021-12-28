@@ -129,11 +129,10 @@
                 </Grid>
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="326*"/>
+                        <ColumnDefinition Width="126*"/>
                         <ColumnDefinition Width="346*"/>
-                        <ColumnDefinition Width="209*"/>
                     </Grid.ColumnDefinitions>
-                    <ScrollViewer Height="450" Background="White" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="3">
+                    <ScrollViewer Background="White" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="2" RenderTransformOrigin="0.405,0.466" Margin="0,0,0,181">
                         <ItemsControl x:Name ="IbList" Visibility="Hidden">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="Loaded">
@@ -148,9 +147,9 @@
                         </ItemsControl>
                     </ScrollViewer>
                     <ProgressBar
-                                Name="progressBar" Width="60" Height="60"
+                                Name="progressBar" Width="57" Height="60"
                                 Style="{StaticResource MaterialDesignCircularProgressBar}"
-                                Value="20" IsIndeterminate="True" Grid.Column="1" Margin="74,0,191.5,300"/>
+                                Value="20" IsIndeterminate="True" Grid.Column="1" HorizontalAlignment="Right" Margin="0,61,284,61" />
                 </Grid>
             </StackPanel>
         </Grid>

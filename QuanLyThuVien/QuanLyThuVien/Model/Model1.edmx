@@ -39,7 +39,7 @@
           <Property Name="TENSACH" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="TACGIA" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="NAMXUATBAN" Type="int" Nullable="false" />
-          <Property Name="NHAXUATBAN" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="NHAXUATBAN" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="NGAYNHAP" Type="smalldatetime" Nullable="false" />
           <Property Name="THELOAI" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TRIGIA" Type="int" Nullable="false" />
@@ -51,9 +51,6 @@
           </Key>
           <Property Name="TENTK" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="MK" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="HOTEN" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="GIOITINH" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="NAMSINH" Type="int" Nullable="false" />
           <Property Name="SDT" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
@@ -67,8 +64,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             <PropertyRef Name="SOTIENPHAT" />
           </Key>
           <Property Name="SONAMXUATBAN" Type="int" Nullable="false" />
-          <Property Name="SLSACHMUON" Type="smallint" Nullable="false" />
-          <Property Name="THOIGIANMUON" Type="smallint" Nullable="false" />
+          <Property Name="SLSACHMUON" Type="int" Nullable="false" />
+          <Property Name="THOIGIANMUON" Type="int" Nullable="false" />
           <Property Name="SOTIENPHAT" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="THETV">
@@ -230,7 +227,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="TENSACH" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="TACGIA" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="NAMXUATBAN" Type="Int32" Nullable="false" />
-          <Property Name="NHAXUATBAN" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="NHAXUATBAN" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="NGAYNHAP" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="THELOAI" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TRIGIA" Type="Int32" Nullable="false" />
@@ -243,9 +240,6 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           </Key>
           <Property Name="TENTK" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="MK" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="HOTEN" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="GIOITINH" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="NAMSINH" Type="Int32" Nullable="false" />
           <Property Name="SDT" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -270,8 +264,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             <PropertyRef Name="SOTIENPHAT" />
           </Key>
           <Property Name="SONAMXUATBAN" Type="Int32" Nullable="false" />
-          <Property Name="SLSACHMUON" Type="Int16" Nullable="false" />
-          <Property Name="THOIGIANMUON" Type="Int16" Nullable="false" />
+          <Property Name="SLSACHMUON" Type="Int32" Nullable="false" />
+          <Property Name="THOIGIANMUON" Type="Int32" Nullable="false" />
           <Property Name="SOTIENPHAT" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK__CTPHIEUMU__MAPHI__2D27B809">
@@ -322,7 +316,7 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -376,9 +370,6 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
               <MappingFragment StoreEntitySet="TAIKHOAN">
                 <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="NAMSINH" ColumnName="NAMSINH" />
-                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
-                <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
                 <ScalarProperty Name="MK" ColumnName="MK" />
                 <ScalarProperty Name="TENTK" ColumnName="TENTK" />
               </MappingFragment>

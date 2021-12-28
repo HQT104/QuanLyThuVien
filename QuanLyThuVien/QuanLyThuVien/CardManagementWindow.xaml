@@ -18,7 +18,7 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        d:DesignHeight="623" d:DesignWidth="920">
+        d:DesignHeight="450" d:DesignWidth="920">
 
     <i:Interaction.Triggers>
         <ei:PropertyChangedTrigger Binding="{Binding Visibility, ElementName=CardWD}">
@@ -118,7 +118,7 @@
                                     <materialDesign:PackIcon Kind="TriangleSmallDown" Height="25" Width="25" Foreground="Black" />
                                 </StackPanel>
                             </Border>
-                     
+
                         </StackPanel>
                     </Grid>
                 </Grid>
@@ -183,11 +183,10 @@
                         </Grid>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="326*"/>
-                                <ColumnDefinition Width="346*"/>
-                                <ColumnDefinition Width="209*"/>
+                                <ColumnDefinition Width="163*"/>
+                                <ColumnDefinition Width="277*"/>
                             </Grid.ColumnDefinitions>
-                            <ScrollViewer Height="450" Background="White" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="3">
+                            <ScrollViewer Background="White" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="2" Margin="0,0,0,185">
                                 <ItemsControl x:Name="cardList" Visibility="Hidden">
                                     <i:Interaction.Triggers>
                                         <i:EventTrigger EventName="Loaded">
@@ -204,7 +203,7 @@
                             <ProgressBar
                                 Name="progressBar" Width="80" Height="80"
                                 Style="{StaticResource MaterialDesignCircularProgressBar}"
-                                Value="20" IsIndeterminate="True" Grid.Column="1" Margin="74,185,191.5,185"/>
+                                Value="20" IsIndeterminate="True" Grid.Column="1" Margin="74.394,185,400,185"/>
                         </Grid>
                     </StackPanel>
                 </Grid>

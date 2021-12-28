@@ -44,21 +44,15 @@ namespace QuanLyThuVien.ViewModel
                     break;
                 }
             }
-            if (dem == 0 || password.Contains(repeatpassword) == false)
-            {
-                MessageBox.Show("Nhập sai thông tin");
-            }
-            else
-            {
-                var tk = DataProvider.Ins.DB.TAIKHOANs.Where(x => x.TENTK == name).SingleOrDefault();
-                tk.MK = password;
-                DataProvider.Ins.DB.SaveChanges();
-                account.acc.Clear();
-                account.pass.Clear();
-                account.repeatpass.Clear();
-                AccountList.Clear();
-                AccountList = new ObservableCollection<TAIKHOAN>(DataProvider.Ins.DB.TAIKHOANs);
-            }
+            var tk = DataProvider.Ins.DB.TAIKHOANs.Where(x => x.TENTK == name).SingleOrDefault();
+            tk.MK = password;
+            DataProvider.Ins.DB.SaveChanges();
+            account.acc.Clear();
+            account.pass.Clear();
+            account.repeatpass.Clear();
+            AccountList.Clear();
+            AccountList = new ObservableCollection<TAIKHOAN>(DataProvider.Ins.DB.TAIKHOANs);
+            MessageBox.Show("Cập nhật thành công");
         }
 
     }

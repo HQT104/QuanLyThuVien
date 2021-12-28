@@ -16,5 +16,12 @@ namespace QuanLyThuVien.ViewModel
 {
     class ReportViewModel : BaseViewModel
     {
+
+        public ICommand BackHome { get; set; }
+        public ReportViewModel()
+        {
+            BackHome = new RelayCommand<ReportWindow>((p) => { return true; }, (p) => { p.Close(); });
+
+        }
     }
 }

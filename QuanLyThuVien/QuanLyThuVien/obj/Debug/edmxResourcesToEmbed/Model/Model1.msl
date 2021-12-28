@@ -49,9 +49,6 @@
         <MappingFragment StoreEntitySet="TAIKHOAN">
           <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
-          <ScalarProperty Name="NAMSINH" ColumnName="NAMSINH" />
-          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
-          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
           <ScalarProperty Name="MK" ColumnName="MK" />
           <ScalarProperty Name="TENTK" ColumnName="TENTK" />
         </MappingFragment>

@@ -67,7 +67,7 @@
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
                             <Button Height="120" Width="80" x:Name="btnChoMuonSach" Background="#FF40BDC7" VerticalAlignment="Top"
-                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
+                                    Command="{Binding BorrowCommand}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <StackPanel VerticalAlignment="Stretch" >
                                     <Image Source="/Images/MuonSach.png" Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
                                     <TextBlock Text="Cho mượn sách" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0 5"></TextBlock>
@@ -75,7 +75,7 @@
                             </Button>
 
                             <Button Height="120" Width="80" x:Name="btnTraSach" Background="#FF40BDC7" VerticalAlignment="Top"
-                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
+                                    Command="{Binding ReturnBookCommand}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <Border  x:Name="bdTraSach" VerticalAlignment="Top" Height="100" >
                                     <StackPanel VerticalAlignment="Stretch" >
                                         <Border CornerRadius="8"  VerticalAlignment="Top"  BorderThickness="2">
@@ -87,7 +87,7 @@
                                 </Border>
                             </Button>
                             <Button Height="120" Width="72" x:Name="btnThongTinChoMuon" Background="#FF40BDC7" VerticalAlignment="Top"
-                                    Command="{Binding InforBorrow}" CommandParameter="{Binding ElementName=HomeCT}">
+                                    Command="{Binding AddInforBorrow}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <StackPanel VerticalAlignment="Stretch" >
                                     <Image Source="/Images/ThongTinMuonSach.png"  Width="40" VerticalAlignment="Top" HorizontalAlignment="Stretch"  />
                                     <TextBlock Text="Thông tin cho mượn" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0 5"></TextBlock>
@@ -127,7 +127,7 @@
                                 </StackPanel>
                             </Button>
                             <Button Height="120" Width="80" x:Name="btnBaoCao" Background="#FF40BDC7" VerticalAlignment="Top"
-                                    Command="{Binding AddCard}" CommandParameter="{Binding ElementName=HomeCT}">
+                                    Command="{Binding ReportCommand}" CommandParameter="{Binding ElementName=HomeCT}">
                                 <Border  x:Name="bdBaoCao" VerticalAlignment="Top" Height="100" >
                                     <StackPanel VerticalAlignment="Stretch" >
                                         <Border CornerRadius="8"  VerticalAlignment="Top"  BorderThickness="2">

@@ -37,13 +37,13 @@
         <Grid Grid.Column="0">
             <Border>
                 <TextBlock x:Name ="txbID"></TextBlock>
-            </Border>            
+            </Border>
         </Grid>
         <Grid Grid.Column="1">
             <Border>
                 <TextBlock x:Name ="txbName"></TextBlock>
             </Border>
-         </Grid>
+        </Grid>
         <Grid Grid.Column="2">
             <Border>
                 <TextBlock x:Name ="txbCategory"></TextBlock>
@@ -64,7 +64,7 @@
             <Border>
                 <TextBlock x:Name ="txbPublisher"></TextBlock>
             </Border>
-         </Grid>
+        </Grid>
         <Grid Grid.Column="6">
             <Border>
                 <TextBlock x:Name ="txbImportDate"></TextBlock>
@@ -73,12 +73,12 @@
         <Grid Grid.Column="7">
             <Border>
                 <TextBlock x:Name ="txbValue"></TextBlock>
-            </Border>           
+            </Border>
         </Grid>
         <Grid Grid.Column="8">
             <Border>
                 <TextBlock x:Name ="txbNumberOfBook"></TextBlock>
-            </Border>            
+            </Border>
         </Grid>
 
         <Grid Grid.Column="9">

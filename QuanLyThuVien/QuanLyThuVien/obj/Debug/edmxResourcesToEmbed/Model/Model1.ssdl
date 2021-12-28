@@ -34,7 +34,7 @@
     <Property Name="TENSACH" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="TACGIA" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="NAMXUATBAN" Type="int" Nullable="false" />
-    <Property Name="NHAXUATBAN" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="NHAXUATBAN" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="NGAYNHAP" Type="smalldatetime" Nullable="false" />
     <Property Name="THELOAI" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TRIGIA" Type="int" Nullable="false" />
@@ -46,9 +46,6 @@
     </Key>
     <Property Name="TENTK" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="MK" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="HOTEN" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="GIOITINH" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="NAMSINH" Type="int" Nullable="false" />
     <Property Name="SDT" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
@@ -62,8 +59,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
       <PropertyRef Name="SOTIENPHAT" />
     </Key>
     <Property Name="SONAMXUATBAN" Type="int" Nullable="false" />
-    <Property Name="SLSACHMUON" Type="smallint" Nullable="false" />
-    <Property Name="THOIGIANMUON" Type="smallint" Nullable="false" />
+    <Property Name="SLSACHMUON" Type="int" Nullable="false" />
+    <Property Name="THOIGIANMUON" Type="int" Nullable="false" />
     <Property Name="SOTIENPHAT" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="THETV">

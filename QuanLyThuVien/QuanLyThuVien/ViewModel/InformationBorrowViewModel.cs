@@ -20,7 +20,7 @@ namespace QuanLyThuVien.ViewModel
     {
         private ObservableCollection<PHIEUMUON> _BorrowList;
         public ObservableCollection<PHIEUMUON> BorrowList { get => _BorrowList; set { _BorrowList = value; OnPropertyChanged(); } }
-        
+
         private ObservableCollection<CTPHIEUMUON> _DetailBorrowList;
         public ObservableCollection<CTPHIEUMUON> DetailBorrowList { get => _DetailBorrowList; set { _DetailBorrowList = value; OnPropertyChanged(); } }
         public ICommand Backib { get; set; }
@@ -59,7 +59,7 @@ namespace QuanLyThuVien.ViewModel
         {
             MSV_selected = ib.MSVSearch.Text.Trim();
             ib.MSV.Clear();
-            ib.HT.Clear();           
+            ib.HT.Clear();
             BorrowList = new ObservableCollection<PHIEUMUON>(DataProvider.Ins.DB.PHIEUMUONs);
             int dem = 0;
             foreach (PHIEUMUON i in BorrowList)

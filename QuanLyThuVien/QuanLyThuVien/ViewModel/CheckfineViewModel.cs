@@ -70,7 +70,5 @@ namespace QuanLyThuVien.ViewModel
             FineList = new ObservableCollection<PHIEUPHAT>(DataProvider.Ins.DB.PHIEUPHATs);
             MaSV_selected = "";
         }
-        //32053226 
     }
 }
-

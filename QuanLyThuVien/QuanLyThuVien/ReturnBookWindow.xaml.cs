@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuanLyThuVien.UserControls
+namespace QuanLyThuVien
 {
     /// <summary>
-    /// Interaction logic for ReportControl.xaml
+    /// Interaction logic for ReturnBookWindow.xaml
     /// </summary>
-    public partial class ReportControl : UserControl
+    public partial class ReturnBookWindow : Window
     {
-        public ReportControl()
+        public ReturnBookWindow()
         {
             InitializeComponent();
         }

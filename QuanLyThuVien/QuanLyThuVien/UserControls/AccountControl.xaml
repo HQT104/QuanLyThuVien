@@ -17,14 +17,9 @@
                 Background="{DynamicResource MaterialDesignPaper}"
                 FontFamily="{DynamicResource MaterialDesignFont}"
                 x:Name="AccountWD"
-                Height="404" Width="688">
+                Height="404" Width="608">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid x:Name="Content" Grid.Column="1" Margin="0,0,0,0.4" >
+        <Grid x:Name="Content"  >
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition Height="60"></RowDefinition>

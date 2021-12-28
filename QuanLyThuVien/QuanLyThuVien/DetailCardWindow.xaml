@@ -43,15 +43,15 @@
         </Grid>
         <Grid Grid.Row="2" Margin="16 0">
             <TextBox x:Name="txbCardName" materialDesign:HintAssist.Hint="Họ và tên" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-            
+
         </Grid>
         <Grid Grid.Row="3" Margin="16 0">
             <TextBox  x:Name="txbCardMaSV" materialDesign:HintAssist.Hint="Mã SV" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-           
+
         </Grid>
         <Grid Grid.Row="4" Margin="16 0">
             <TextBox x:Name="txbCardEmail" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
-            
+
         </Grid>
         <Grid Grid.Row="5" Margin="16 0">
             <TextBox x:Name="txbCardSDT"  materialDesign:HintAssist.Hint="SĐT" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
@@ -61,7 +61,7 @@
         </Grid>
         <Grid Grid.Row="7" Margin="16 0">
             <TextBox x:Name="txbCardTotalDebt"  materialDesign:HintAssist.Hint="Tổng nợ" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-         </Grid>
+        </Grid>
         <Grid Grid.Row="8" >
             <Grid.Resources>
                 <Style TargetType="Button">

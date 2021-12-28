@@ -69,7 +69,7 @@ namespace QuanLyThuVien.ViewModel
 
         public void OpenEditCardWD(CardDetailControl cardDetail)
         {
-            id_selected =cardDetail.txbID.Text;
+            id_selected = cardDetail.txbID.Text;
             //MessageBox.Show(id_selected.ToString());
             int n = CardList.Count;
             THETV s = new THETV();
@@ -106,7 +106,7 @@ namespace QuanLyThuVien.ViewModel
         public void OpenAddCardWD(ItemsControl p)
         {
             AddCardWindow addCardWindow = new AddCardWindow();
-            addCardWindow.txbCardDate.Text = DateTime.Now.ToShortDateString(); 
+            addCardWindow.txbCardDate.Text = DateTime.Now.ToShortDateString();
             addCardWindow.ShowDialog();
             if (isAddCardSuccess)
             {
@@ -154,7 +154,7 @@ namespace QuanLyThuVien.ViewModel
                 settingDispatcher.BeginInvoke(update, i, p.cardList);
             }
             e.Result = p;
-          
+
         }
         public delegate void UpdateUi(THETV a, ItemsControl p);
         public bool IsDigitsOnly(string str)
@@ -187,13 +187,42 @@ namespace QuanLyThuVien.ViewModel
         }
         public bool IsCardValid(AddCardWindow card)
         {
+            if (String.IsNullOrEmpty(card.txbCardDate.Text) || String.IsNullOrEmpty(card.txbCardEmail.Text) || String.IsNullOrEmpty(card.txbCardMaSV.Text)
+               || String.IsNullOrEmpty(card.txbCardName.Text) || String.IsNullOrEmpty(card.txbCardSDT.Text))
+            {
+                MessageBox.Show("Vui lòng nhập thông tin đầy đủ");
+                return false;
+            }
+
+            if (!IsDigitsOnly(card.txbCardSDT.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại là số nguyên");
+                return false;
+            }
             return true;
-            
+
         }
 
         // Kiểm tra cho trường hợp edit
         public bool IsCardValid(DetailCardWindow card)
         {
+            if (String.IsNullOrEmpty(card.txbCardDate.Text) || String.IsNullOrEmpty(card.txbCardEmail.Text) || String.IsNullOrEmpty(card.txbCardMaSV.Text)
+               || String.IsNullOrEmpty(card.txbCardName.Text) || String.IsNullOrEmpty(card.txbCardSDT.Text) || String.IsNullOrEmpty(card.txbCardTotalDebt.Text))
+            {
+                MessageBox.Show("Vui lòng nhập thông tin đầy đủ");
+                return false;
+            }
+
+            if (!IsDigitsOnly(card.txbCardSDT.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại là số nguyên");
+                return false;
+            }
+            if (!IsDigitsOnly(card.txbCardTotalDebt.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tổng nợ là số nguyên");
+                return false;
+            }
             return true;
         }
         public void DeleteCard(CardDetailControl cardDetail)
@@ -206,7 +235,7 @@ namespace QuanLyThuVien.ViewModel
                 foreach (THETV card in CardList)
                 {
                     if (card.MASV == id)
-                    {                        
+                    {
                         DataProvider.Ins.DB.THETVs.Remove(card);
                         DataProvider.Ins.DB.SaveChanges();
                         CardList.Clear();
@@ -233,7 +262,7 @@ namespace QuanLyThuVien.ViewModel
                 SODT = add.txbCardSDT.Text,
                 NGAYLAPTHE = Convert.ToDateTime(add.txbCardDate.Text),
                 TONGNO = 0,
-            };    
+            };
             DataProvider.Ins.DB.THETVs.Add(card);
             DataProvider.Ins.DB.SaveChanges();
             CardList.Clear();

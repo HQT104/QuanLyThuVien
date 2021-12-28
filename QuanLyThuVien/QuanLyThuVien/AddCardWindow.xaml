@@ -28,7 +28,7 @@
                     <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="40"></RowDefinition>
-                     <RowDefinition Height="70"></RowDefinition>
+                    <RowDefinition Height="70"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Height="60" >
                     <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -92,7 +92,7 @@
                         </TextBox>
                     </Border>
                 </Grid>
-               
+
                 <Grid Grid.Row="4" >
                     <Grid.Resources>
                         <Style TargetType="Button">

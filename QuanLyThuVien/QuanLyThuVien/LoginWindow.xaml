@@ -38,10 +38,11 @@
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0">
                             <TextBox Foreground="White" Width="150" BorderBrush="White" CaretBrush="White" SelectionBrush="White"
-                             materialDesign:HintAssist.Hint="Tài khoản"
+                             materialDesign:HintAssist.Hint="Tài khoản" x:Name="Username"
                              Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}" >
                                 <Validation.ErrorTemplate>
@@ -77,15 +78,19 @@
                             </PasswordBox>
                         </Grid>
                         <Grid Grid.Row="2">
+                            <Button Background="#FF4699DA" Command="{Binding ForgotPasswordCommand}"
+                                    CommandParameter="{Binding ElementName=loginWindow}" 
+                                    Content="Quên mật khẩu?" FontSize="11" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+                        </Grid>
+                        <Grid Grid.Row="3">
                             <Grid.Resources>
                                 <Style TargetType="Button">
                                     <Setter Property="Template">
                                         <Setter.Value>
                                             <ControlTemplate TargetType="Button">
-                                                <Border x:Name="ButtonBorder" Background="White" CornerRadius="10" Padding="30 8">
+                                                <Border x:Name="ButtonBorder" Background="White" CornerRadius="10" Padding="30 8" >
                                                     <ContentPresenter Cursor="Hand"/>
                                                 </Border>
-
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>

@@ -16,9 +16,6 @@ namespace QuanLyThuVien.Model
     {
         public string TENTK { get; set; }
         public string MK { get; set; }
-        public string HOTEN { get; set; }
-        public string GIOITINH { get; set; }
-        public int NAMSINH { get; set; }
         public string SDT { get; set; }
         public string EMAIL { get; set; }
     }

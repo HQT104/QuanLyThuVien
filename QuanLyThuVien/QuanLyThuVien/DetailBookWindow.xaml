@@ -51,27 +51,27 @@
         </Grid>
         <Grid Grid.Row="4" Margin="16 0">
             <TextBox  x:Name="txbBookCategory" materialDesign:HintAssist.Hint="Thể loại" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-           
+
         </Grid>
         <Grid Grid.Row="5" Margin="16 0">
             <TextBox x:Name="txbBookAuthor" materialDesign:HintAssist.Hint="Tác giả" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-            
+
         </Grid>
         <Grid Grid.Row="6" Margin="16 0">
             <TextBox  x:Name="txbBookPublishYear" materialDesign:HintAssist.Hint="Năm xuất bản" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-            
+
         </Grid>
         <Grid Grid.Row="7" Margin="16 0">
             <TextBox  x:Name="txbBookPulisher" materialDesign:HintAssist.Hint="Nhà xuất bản" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-          
+
         </Grid>
         <Grid Grid.Row="8" Margin="16 0" >
             <TextBox  x:Name="txbBookImportDate" materialDesign:HintAssist.Hint="Ngày nhập" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-            
+
         </Grid>
         <Grid Grid.Row="9" Margin="16 0">
             <TextBox x:Name="txbBookValue" materialDesign:HintAssist.Hint="Giá trị" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-            
+
         </Grid>
         <Grid Grid.Row="10" Margin="16 0">
             <TextBox  x:Name="txbBookNumber" materialDesign:HintAssist.Hint="Số lượng" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />

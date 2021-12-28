@@ -8,7 +8,7 @@
                 mc:Ignorable="d"
                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
                 xmlns:viewmodel="clr-namespace:QuanLyThuVien.ViewModel" 
-                DataContext="{StaticResource MainVM}"
+                DataContext="{StaticResource RegulationVM}"
                 TextElement.Foreground="{DynamicResource MaterialDesignBody}"
                 TextElement.FontWeight="Regular"
                 TextElement.FontSize="14"
@@ -16,9 +16,108 @@
                 TextOptions.TextRenderingMode="Auto"
                 Background="{DynamicResource MaterialDesignPaper}"
                 FontFamily="{DynamicResource MaterialDesignFont}"
-                x:Name="wdRegulation"
-                Height="404" Width="688">
-    <Grid Background="Aqua">
+                x:Name="RegulationCT"
+                Height="454" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="250"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#44bcd8" CornerRadius="30" Height="50" BorderBrush="Black" BorderThickness="1" Width="400">
+            <TextBlock  x:Name="QL" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Quản lý thư viện</TextBlock>
+        </Border>
+
+        <TextBlock Grid.Row="1" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Thay đổi quy định</TextBlock>
+
+        <Border Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="400"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1" Background="#FF4699DA" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50*"></RowDefinition>
+                        <RowDefinition Height="50*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14" >Số năm xuất bản</TextBlock>
+                        <Border Grid.Column="1" Background="White" CornerRadius="25" Height="30" Width="200" BorderBrush="Black" BorderThickness="1">
+                            <TextBox Background="Transparent" Height="30" Width="179" BorderThickness="0" x:Name="txbSONAMXUATBAN"
+                                        VerticalContentAlignment="Center" HorizontalAlignment="Center">
+                            </TextBox>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14">Số sách mượn tối đa</TextBlock>
+                        <Border Grid.Column="1" Background="White" CornerRadius="25" Height="30" Width="200" BorderBrush="Black" BorderThickness="1">
+                            <TextBox Background="Transparent" Height="30" Width="179" BorderThickness="0" x:Name="txbSLSACHMUON"
+                                        VerticalContentAlignment="Center" HorizontalAlignment="Center">
+                            </TextBox>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14">Thời gian mượn</TextBlock>
+                        <Border Grid.Column="1" Background="White" CornerRadius="25" Height="30" Width="200" BorderBrush="Black" BorderThickness="1">
+                            <TextBox Background="Transparent" Height="30" Width="179" BorderThickness="0" x:Name="txbTHOIGIANMUON"
+                                        VerticalContentAlignment="Center" HorizontalAlignment="Center">
+                            </TextBox>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14">Số tiền phạt trả trễ/ngày</TextBlock>
+                        <Border Grid.Column="1" Background="White" CornerRadius="25" Height="30" Width="200" BorderBrush="Black" BorderThickness="1">
+                            <TextBox Background="Transparent" Height="30" Width="179" BorderThickness="0" x:Name="txbSOTIENPHAT"
+                                        VerticalContentAlignment="Center" HorizontalAlignment="Center">
+                            </TextBox>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="3">
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#F73B4F" CornerRadius="15" Margin="0 20" Padding="20 2" Height="30">
+                                    <Grid>
+                                        <ContentPresenter Margin="5" Cursor="Hand"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Grid.Resources>
+            <Button Content="Xác nhận" Foreground="White" FontSize="14" Width="120"
+                Command="{Binding ConfirmRegulation}" CommandParameter="{Binding ElementName=RegulationCT}"></Button>
+        </Grid>
 
     </Grid>
+
 </UserControl>

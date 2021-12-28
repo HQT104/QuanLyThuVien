@@ -105,7 +105,7 @@ namespace QuanLyThuVien.ViewModel
                 bookDetail.txbPublisher.Text = edit.txbBookPulisher.Text;
                 bookDetail.txbPushlishYear.Text = edit.txbBookPublishYear.Text;
                 bookDetail.txbNumberOfBook.Text = edit.txbBookNumber.Text;
-                bookDetail.txbName.Text = edit.txbBookName.Text; 
+                bookDetail.txbName.Text = edit.txbBookName.Text;
                 isUpdateBookSuccess = false;
             }
 
@@ -136,7 +136,7 @@ namespace QuanLyThuVien.ViewModel
             b.txbValue.Text = s.TRIGIA.ToString();
             b.txbPublisher.Text = s.NHAXUATBAN;
             b.txbPushlishYear.Text = s.NAMXUATBAN.ToString();
-            b.txbNumberOfBook.Text = s.SOLUONG.ToString();          
+            b.txbNumberOfBook.Text = s.SOLUONG.ToString();
             p.Items.Add(b);
         }
 
@@ -198,7 +198,7 @@ namespace QuanLyThuVien.ViewModel
             BookList = new ObservableCollection<SACH>(DataProvider.Ins.DB.SACHes);
             MessageBox.Show("Cập nhật thành công");
         }
-     
+
         public void DeleteBook(BookDetailControl bookDetail)
         {
             string s = "Bạn muốn xóa sách có mã sách " + bookDetail.txbID.Text + " không?";
