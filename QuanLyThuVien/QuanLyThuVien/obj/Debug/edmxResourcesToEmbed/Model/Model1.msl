@@ -54,6 +54,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="THAMSOes">
+      <EntityTypeMapping TypeName="QuanLyThuVienModel.THAMSO">
+        <MappingFragment StoreEntitySet="THAMSO">
+          <ScalarProperty Name="GIATRI" ColumnName="GIATRI" />
+          <ScalarProperty Name="TENTHAMSO" ColumnName="TENTHAMSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="THETVs">
       <EntityTypeMapping TypeName="QuanLyThuVienModel.THETV">
         <MappingFragment StoreEntitySet="THETV">
@@ -63,16 +71,6 @@
           <ScalarProperty Name="HOTENSV" ColumnName="HOTENSV" />
           <ScalarProperty Name="NGAYLAPTHE" ColumnName="NGAYLAPTHE" />
           <ScalarProperty Name="MASV" ColumnName="MASV" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="THAMSOes">
-      <EntityTypeMapping TypeName="QuanLyThuVienModel.THAMSO">
-        <MappingFragment StoreEntitySet="THAMSO">
-          <ScalarProperty Name="SOTIENPHAT" ColumnName="SOTIENPHAT" />
-          <ScalarProperty Name="THOIGIANMUON" ColumnName="THOIGIANMUON" />
-          <ScalarProperty Name="SLSACHMUON" ColumnName="SLSACHMUON" />
-          <ScalarProperty Name="SONAMXUATBAN" ColumnName="SONAMXUATBAN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

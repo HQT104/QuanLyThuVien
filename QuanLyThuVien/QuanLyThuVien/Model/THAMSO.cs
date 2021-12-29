@@ -14,9 +14,7 @@ namespace QuanLyThuVien.Model
     
     public partial class THAMSO
     {
-        public int SONAMXUATBAN { get; set; }
-        public int SLSACHMUON { get; set; }
-        public int THOIGIANMUON { get; set; }
-        public int SOTIENPHAT { get; set; }
+        public string TENTHAMSO { get; set; }
+        public int GIATRI { get; set; }
     }
 }

@@ -6,8 +6,8 @@
     <EntitySet Name="PHIEUPHATs" EntityType="QuanLyThuVienModel.PHIEUPHAT" />
     <EntitySet Name="SACHes" EntityType="QuanLyThuVienModel.SACH" />
     <EntitySet Name="TAIKHOANs" EntityType="QuanLyThuVienModel.TAIKHOAN" />
-    <EntitySet Name="THETVs" EntityType="QuanLyThuVienModel.THETV" />
     <EntitySet Name="THAMSOes" EntityType="QuanLyThuVienModel.THAMSO" />
+    <EntitySet Name="THETVs" EntityType="QuanLyThuVienModel.THETV" />
     <AssociationSet Name="FK__CTPHIEUMU__MAPHI__2D27B809" Association="QuanLyThuVienModel.FK__CTPHIEUMU__MAPHI__2D27B809">
       <End Role="PHIEUMUON" EntitySet="PHIEUMUONs" />
       <End Role="CTPHIEUMUON" EntitySet="CTPHIEUMUONs" />
@@ -80,6 +80,13 @@
     <Property Name="SDT" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="THAMSO">
+    <Key>
+      <PropertyRef Name="TENTHAMSO" />
+    </Key>
+    <Property Name="TENTHAMSO" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GIATRI" Type="Int32" Nullable="false" />
+  </EntityType>
   <EntityType Name="THETV">
     <Key>
       <PropertyRef Name="MASV" />
@@ -92,18 +99,6 @@
     <Property Name="TONGNO" Type="Int32" Nullable="false" />
     <NavigationProperty Name="PHIEUMUONs" Relationship="QuanLyThuVienModel.FK__PHIEUMUON__MASV__2A4B4B5E" FromRole="THETV" ToRole="PHIEUMUON" />
     <NavigationProperty Name="PHIEUPHATs" Relationship="QuanLyThuVienModel.FK__PHIEUPHAT__MASV__30F848ED" FromRole="THETV" ToRole="PHIEUPHAT" />
-  </EntityType>
-  <EntityType Name="THAMSO">
-    <Key>
-      <PropertyRef Name="SONAMXUATBAN" />
-      <PropertyRef Name="SLSACHMUON" />
-      <PropertyRef Name="THOIGIANMUON" />
-      <PropertyRef Name="SOTIENPHAT" />
-    </Key>
-    <Property Name="SONAMXUATBAN" Type="Int32" Nullable="false" />
-    <Property Name="SLSACHMUON" Type="Int32" Nullable="false" />
-    <Property Name="THOIGIANMUON" Type="Int32" Nullable="false" />
-    <Property Name="SOTIENPHAT" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="FK__CTPHIEUMU__MAPHI__2D27B809">
     <End Type="QuanLyThuVienModel.PHIEUMUON" Role="PHIEUMUON" Multiplicity="1" />

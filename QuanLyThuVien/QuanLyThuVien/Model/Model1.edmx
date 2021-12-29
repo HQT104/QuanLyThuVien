@@ -54,19 +54,12 @@
           <Property Name="SDT" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="THAMSO">
           <Key>
-            <PropertyRef Name="SONAMXUATBAN" />
-            <PropertyRef Name="SLSACHMUON" />
-            <PropertyRef Name="THOIGIANMUON" />
-            <PropertyRef Name="SOTIENPHAT" />
+            <PropertyRef Name="TENTHAMSO" />
           </Key>
-          <Property Name="SONAMXUATBAN" Type="int" Nullable="false" />
-          <Property Name="SLSACHMUON" Type="int" Nullable="false" />
-          <Property Name="THOIGIANMUON" Type="int" Nullable="false" />
-          <Property Name="SOTIENPHAT" Type="int" Nullable="false" />
+          <Property Name="TENTHAMSO" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="GIATRI" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="THETV">
           <Key>
@@ -133,15 +126,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <EntitySet Name="PHIEUPHAT" EntityType="Self.PHIEUPHAT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THAMSO" EntityType="Self.THAMSO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THETV" EntityType="Self.THETV" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="THAMSO" EntityType="Self.THAMSO" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [THAMSO].[SONAMXUATBAN] AS [SONAMXUATBAN], 
-    [THAMSO].[SLSACHMUON] AS [SLSACHMUON], 
-    [THAMSO].[THOIGIANMUON] AS [THOIGIANMUON], 
-    [THAMSO].[SOTIENPHAT] AS [SOTIENPHAT]
-    FROM [dbo].[THAMSO] AS [THAMSO]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK__CTPHIEUMU__MAPHI__2D27B809" Association="Self.FK__CTPHIEUMU__MAPHI__2D27B809">
             <End Role="PHIEUMUON" EntitySet="PHIEUMUON" />
             <End Role="CTPHIEUMUON" EntitySet="CTPHIEUMUON" />
@@ -169,8 +155,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <EntitySet Name="PHIEUPHATs" EntityType="QuanLyThuVienModel.PHIEUPHAT" />
           <EntitySet Name="SACHes" EntityType="QuanLyThuVienModel.SACH" />
           <EntitySet Name="TAIKHOANs" EntityType="QuanLyThuVienModel.TAIKHOAN" />
-          <EntitySet Name="THETVs" EntityType="QuanLyThuVienModel.THETV" />
           <EntitySet Name="THAMSOes" EntityType="QuanLyThuVienModel.THAMSO" />
+          <EntitySet Name="THETVs" EntityType="QuanLyThuVienModel.THETV" />
           <AssociationSet Name="FK__CTPHIEUMU__MAPHI__2D27B809" Association="QuanLyThuVienModel.FK__CTPHIEUMU__MAPHI__2D27B809">
             <End Role="PHIEUMUON" EntitySet="PHIEUMUONs" />
             <End Role="CTPHIEUMUON" EntitySet="CTPHIEUMUONs" />
@@ -243,6 +229,13 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="SDT" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="THAMSO">
+          <Key>
+            <PropertyRef Name="TENTHAMSO" />
+          </Key>
+          <Property Name="TENTHAMSO" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="GIATRI" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="THETV">
           <Key>
             <PropertyRef Name="MASV" />
@@ -255,18 +248,6 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
           <Property Name="TONGNO" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PHIEUMUONs" Relationship="QuanLyThuVienModel.FK__PHIEUMUON__MASV__2A4B4B5E" FromRole="THETV" ToRole="PHIEUMUON" />
           <NavigationProperty Name="PHIEUPHATs" Relationship="QuanLyThuVienModel.FK__PHIEUPHAT__MASV__30F848ED" FromRole="THETV" ToRole="PHIEUPHAT" />
-        </EntityType>
-        <EntityType Name="THAMSO">
-          <Key>
-            <PropertyRef Name="SONAMXUATBAN" />
-            <PropertyRef Name="SLSACHMUON" />
-            <PropertyRef Name="THOIGIANMUON" />
-            <PropertyRef Name="SOTIENPHAT" />
-          </Key>
-          <Property Name="SONAMXUATBAN" Type="Int32" Nullable="false" />
-          <Property Name="SLSACHMUON" Type="Int32" Nullable="false" />
-          <Property Name="THOIGIANMUON" Type="Int32" Nullable="false" />
-          <Property Name="SOTIENPHAT" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK__CTPHIEUMU__MAPHI__2D27B809">
           <End Type="QuanLyThuVienModel.PHIEUMUON" Role="PHIEUMUON" Multiplicity="1" />
@@ -375,6 +356,14 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="THAMSOes">
+            <EntityTypeMapping TypeName="QuanLyThuVienModel.THAMSO">
+              <MappingFragment StoreEntitySet="THAMSO">
+                <ScalarProperty Name="GIATRI" ColumnName="GIATRI" />
+                <ScalarProperty Name="TENTHAMSO" ColumnName="TENTHAMSO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="THETVs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.THETV">
               <MappingFragment StoreEntitySet="THETV">
@@ -384,16 +373,6 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
                 <ScalarProperty Name="HOTENSV" ColumnName="HOTENSV" />
                 <ScalarProperty Name="NGAYLAPTHE" ColumnName="NGAYLAPTHE" />
                 <ScalarProperty Name="MASV" ColumnName="MASV" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="THAMSOes">
-            <EntityTypeMapping TypeName="QuanLyThuVienModel.THAMSO">
-              <MappingFragment StoreEntitySet="THAMSO">
-                <ScalarProperty Name="SOTIENPHAT" ColumnName="SOTIENPHAT" />
-                <ScalarProperty Name="THOIGIANMUON" ColumnName="THOIGIANMUON" />
-                <ScalarProperty Name="SLSACHMUON" ColumnName="SLSACHMUON" />
-                <ScalarProperty Name="SONAMXUATBAN" ColumnName="SONAMXUATBAN" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

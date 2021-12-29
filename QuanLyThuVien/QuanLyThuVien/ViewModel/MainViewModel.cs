@@ -76,10 +76,13 @@ namespace QuanLyThuVien.ViewModel
                     THAMSO TS = new THAMSO();
                     var regulations = new ObservableCollection<THAMSO>(DataProvider.Ins.DB.THAMSOes);
                     TS = regulations[0];
-                    mainWindow.Regulation.txbSLSACHMUON.Text = TS.SLSACHMUON.ToString();
-                    mainWindow.Regulation.txbSONAMXUATBAN.Text = TS.SONAMXUATBAN.ToString();
-                    mainWindow.Regulation.txbSOTIENPHAT.Text = TS.SOTIENPHAT.ToString();
-                    mainWindow.Regulation.txbTHOIGIANMUON.Text = TS.THOIGIANMUON.ToString();
+                    mainWindow.Regulation.txbSONAMXUATBAN.Text = TS.GIATRI.ToString();
+                    TS = regulations[1];
+                    mainWindow.Regulation.txbSLSACHMUON.Text = TS.GIATRI.ToString();
+                    TS = regulations[2];
+                    mainWindow.Regulation.txbTHOIGIANMUON.Text = TS.GIATRI.ToString();
+                    TS = regulations[3];
+                    mainWindow.Regulation.txbSOTIENPHAT.Text = TS.GIATRI.ToString();
                     mainWindow.bdRegulation.Background = (Brush)new BrushConverter().ConvertFrom("#ffffff");
                     mainWindow.icRegulation.Foreground = (Brush)new BrushConverter().ConvertFrom("#000000");
                     mainWindow.txtRegulation.Foreground = (Brush)new BrushConverter().ConvertFrom("#000000");

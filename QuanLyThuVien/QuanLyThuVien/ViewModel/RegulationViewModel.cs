@@ -31,15 +31,18 @@ namespace QuanLyThuVien.ViewModel
             if (!IsRegulationValid(edit)) return;
             THAMSO TS = new THAMSO();
             var regulations = new ObservableCollection<THAMSO>(DataProvider.Ins.DB.THAMSOes);
+
             TS = regulations[0];
+            TS.GIATRI = int.Parse(edit.txbSONAMXUATBAN.Text);
+            TS = regulations[1];
+            TS.GIATRI = int.Parse(edit.txbSLSACHMUON.Text);
+            TS = regulations[2];
+            TS.GIATRI = int.Parse(edit.txbTHOIGIANMUON.Text);
+            TS = regulations[3];
+            TS.GIATRI = int.Parse(edit.txbSOTIENPHAT.Text);
 
-            TS.THOIGIANMUON = int.Parse(edit.txbTHOIGIANMUON.Text);
-            TS.SOTIENPHAT = int.Parse(edit.txbSOTIENPHAT.Text);
-            TS.SONAMXUATBAN = int.Parse(edit.txbSONAMXUATBAN.Text);
-            TS.SLSACHMUON = int.Parse(edit.txbSLSACHMUON.Text);
 
-
-            // DataProvider.Ins.DB.SaveChanges();
+            DataProvider.Ins.DB.SaveChanges();
             MessageBox.Show("Cập nhật thành công");
         }
         public bool IsDigitsOnly(string str)

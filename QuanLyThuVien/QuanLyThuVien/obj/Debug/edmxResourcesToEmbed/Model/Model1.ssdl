@@ -49,19 +49,12 @@
     <Property Name="SDT" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="THAMSO">
     <Key>
-      <PropertyRef Name="SONAMXUATBAN" />
-      <PropertyRef Name="SLSACHMUON" />
-      <PropertyRef Name="THOIGIANMUON" />
-      <PropertyRef Name="SOTIENPHAT" />
+      <PropertyRef Name="TENTHAMSO" />
     </Key>
-    <Property Name="SONAMXUATBAN" Type="int" Nullable="false" />
-    <Property Name="SLSACHMUON" Type="int" Nullable="false" />
-    <Property Name="THOIGIANMUON" Type="int" Nullable="false" />
-    <Property Name="SOTIENPHAT" Type="int" Nullable="false" />
+    <Property Name="TENTHAMSO" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GIATRI" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="THETV">
     <Key>
@@ -128,15 +121,8 @@ warning 6002: The table/view 'QuanLyThuVien.dbo.THAMSO' does not have a primary 
     <EntitySet Name="PHIEUPHAT" EntityType="Self.PHIEUPHAT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THAMSO" EntityType="Self.THAMSO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="THETV" EntityType="Self.THETV" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="THAMSO" EntityType="Self.THAMSO" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [THAMSO].[SONAMXUATBAN] AS [SONAMXUATBAN], 
-    [THAMSO].[SLSACHMUON] AS [SLSACHMUON], 
-    [THAMSO].[THOIGIANMUON] AS [THOIGIANMUON], 
-    [THAMSO].[SOTIENPHAT] AS [SOTIENPHAT]
-    FROM [dbo].[THAMSO] AS [THAMSO]</DefiningQuery>
-    </EntitySet>
     <AssociationSet Name="FK__CTPHIEUMU__MAPHI__2D27B809" Association="Self.FK__CTPHIEUMU__MAPHI__2D27B809">
       <End Role="PHIEUMUON" EntitySet="PHIEUMUON" />
       <End Role="CTPHIEUMUON" EntitySet="CTPHIEUMUON" />
